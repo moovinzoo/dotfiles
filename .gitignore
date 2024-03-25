@@ -2,3 +2,6 @@
 .viminfo
 .bash_history
 
+.config/zoom.conf
+.config/zoomus.conf
+.config/Unknown\ Organization/zoom.conf
