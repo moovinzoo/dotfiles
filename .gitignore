@@ -1,4 +1,5 @@
 **/.netrwhist
+**/tags
 .viminfo
 .bash_history
 
@@ -33,3 +34,6 @@
 .config/ibus
 
 .config/gatsby
+
+.config/kitty/themes/*
+!.config/kitty/themes/current-theme.conf
