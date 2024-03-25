@@ -7,3 +7,6 @@
 [submodule ".bash_it"]
 	path = .bash_it
 	url = https://github.com/moovinzoo/bash-it.git
+[submodule ".config/ranger/plugins/ranger_devicons"]
+	path = .config/ranger/plugins/ranger_devicons
+	url = https://github.com/alexanderjeurissen/ranger_devicons.git
