@@ -1,3 +1,6 @@
 [submodule ".vim/pack/vim-wayland-clipboard/start/vim-wayland-clipboard"]
 	path = .vim/pack/vim-wayland-clipboard/start/vim-wayland-clipboard
 	url = https://github.com/jasonccox/vim-wayland-clipboard
+[submodule ".bash-it"]
+	path = .bash-it
+	url = https://github.com/moovinzoo/bash-it.git
