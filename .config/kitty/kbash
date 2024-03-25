@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec bash --rcfile $KITTEN_SSH_LOCAL_BASH_DIR/.bashrc
