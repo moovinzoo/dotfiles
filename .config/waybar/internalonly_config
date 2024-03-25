@@ -1,0 +1,98 @@
+{
+    "layer": "top",
+
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 15,
+    "margin-right": 15,
+
+    "modules-left": ["custom/updates", "hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "bluetooth", "wireplumber", "backlight", "battery", "custom/power"],
+
+    "custom/updates": {
+      "format": "{icon}",
+      "return-type": "json",
+      "format-icons": {
+        "has-updates": "󱍷 ",
+        "updated": "󰣇 "
+      },
+      "exec-if": "which waybar-module-pacman-updates",
+      "exec": "waybar-module-pacman-updates",
+    },
+
+    "hyprland/workspaces": {
+      "margin-left": 10,
+      "format": "{windows}",
+      "format-window-separator": "",
+      "window-rewrite-default": "?",
+      "window-rewrite": {
+        "class<kitty>": "  ",
+        "class<firefox>": " ",
+        "class<org.qutebrowser.qutebrowser>": " ",
+        "class<kitty> title<.* - VIM>": " ",
+        "class<kitty> title<ranger>": " ",
+        /* "title<.*youtube.*>": "", // Windows whose titles contain "youtube" */
+        /* "class<org.qutebrowser.qutebrowser> title<.*github.*>": "",
+        /* "code": "󰨞", */
+      },
+    },
+
+    "hyprland/window": {
+      "max-length": 140,
+      "format": "{title} - {class}",
+      "rewrite": {
+        "^(?!VIM - kitty|ranger - kitty$)(.*) - kitty$": " $1",
+        "(.*) - VIM - kitty": " $1",
+        "ranger - kitty": " ranger",
+        "(.*) - qutebrowser - org.qutebrowser.qutebrowser": " $1",
+        "(.*) — Mozilla Firefox - firefox": " $1",
+      },
+    },
+
+    "clock": {
+      "format-alt": "{:%a, %d. %b %H:%M}",
+    },
+
+    "network": {
+      "format": "{ifname}",
+      "format-wifi": "{icon}{essid}",
+      "format-ethernet": "{ipaddr}/{signalStrength}",
+      "format-disconnected": "󰤮 ",
+      "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
+      "on-click": "exec kitty -- nmtui"
+    },
+
+    "bluetooth": {
+      "format": "{status}",
+      "format-disabled": "", // an empty format will hide the module
+      "format-connected": "{num_connections}",
+      "tooltip-format": "{controller_alias}\t{controller_address}",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "on-click": "exec kitty -- bluetuith",
+    },
+
+    "wireplumber": {
+      "format": "󰕾 {volume}",
+      "format-muted": "󰖁 ",
+    },
+
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "󰍹 {percent}",
+      "scroll-step": 5.0,
+      /* "format-icons": ["\uf244 ", "\uf243 ", "\uf243 ", "\uf243 ", "\uf242 ", "\uf242 ", "\uf242 ", "\uf241 ", "\uf241 ", "\uf240 "], */
+    },
+
+    "battery": {
+      "format": " {capacity}",
+      /* "format": "{icon} {capacity}", */
+      /* "format-icons": ["", "", "", "", ""] */
+    },
+
+    "custom/power": {
+      "on-click": "wlogout",
+      "format": " "
+    },
+}
