@@ -255,6 +255,14 @@ endfunction
 " [plugin: TermDebug(builtin)]
 " enable builtin package
 packadd! termdebug
+"
+" [plugin: Netrw(builtin)]
+" tree style listing
+let g:netrw_liststyle= 3
+" suppress banner
+let g:netrw_banner= 0
+" specify initial size to 25%
+let g:netrw_winsize= 25
 
 " [plugin: Fugitive]
 " always show status line
