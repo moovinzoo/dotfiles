@@ -16,3 +16,6 @@
 [submodule ".vim/pack/airblade/start/vim-gitgutter"]
 	path = .vim/pack/airblade/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule ".vim/pack/majutsushi/start/tagbar"]
+	path = .vim/pack/majutsushi/start/tagbar
+	url = https://github.com/majutsushi/tagbar.git

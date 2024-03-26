@@ -167,7 +167,7 @@ inoremap <C-a> <Home>
 inoremap <C-e> <End>
 cnoremap <C-y> <C-r>0
 " insert current datetime
-inoremap <C-'> <C-R>=InsertDateTime()<CR>
+" inoremap <C-'> <C-R>=InsertDateTime()<CR>
 
 " [mapping: visual mode]
 vnoremap H ^
@@ -252,16 +252,15 @@ endfunction
 " ---------------------------------------------------------------------------
 " [plugins]
 "
-" [plugin: TermDebug]
-" https://github.com/vim/vim/blob/master/runtime/pack/dist/opt/termdebug
+" [plugin: TermDebug(builtin)]
 " enable builtin package
 packadd! termdebug
 
 " [plugin: Fugitive]
-" https://github.com/tpope/vim-fugitive
+" always show status line
+set laststatus=2
 
 " [plugin: GitGutter]
-" https://github.com/airblade/vim-gitgutter
 " diffmarkers should appear automatically after a short delay (default:4000)
 set updatetime=100
 " always show sign column without redraw (default: auto)
@@ -270,3 +269,14 @@ set signcolumn=yes
 let g:gitgutter_set_sign_backgrounds = 1
 " set bg to signcolumn (default: NULL)
 hi SignColumn guibg=#122222
+
+" [plugin: Tagbar]
+let g:tagbar_width=30
+" configure autoopen
+autocmd VimEnter * nested :call tagbar#autoopen(1)
+autocmd FileTYpe * nested :call tagbar#autoopen(0)
+autocmd BufEnter * nested :call tagbar#autoopen(0)
+" nnoremap <silent> <F8> :TagbarToggle<CR>
+
+
+"TODO: comment plugin
