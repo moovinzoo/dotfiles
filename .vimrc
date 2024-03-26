@@ -171,7 +171,7 @@ inoremap <C-'> <C-R>=InsertDateTime()<CR>
 
 " [mapping: visual mode]
 vnoremap H ^
-vnoremap L $
+vnoremap L g_
 
 " [mapping: command mode]
 " restore shell keymaps in command mode
@@ -250,8 +250,11 @@ endfunction
 
 
 " ---------------------------------------------------------------------------
-" [plugin configs]
+" [plugins]
 "
-" " [plugin: TermDebug]
+" [plugin: TermDebug]
 " https://github.com/vim/vim/blob/master/runtime/pack/dist/opt/termdebug
 packadd! termdebug
+
+" [plugin: Fugitive]
+" https://github.com/tpope/vim-fugitive.git
