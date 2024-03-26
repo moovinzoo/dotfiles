@@ -252,17 +252,17 @@ endfunction
 " ---------------------------------------------------------------------------
 " [plugins]
 "
-" [plugin: TermDebug(builtin)]
+" [plugin: TermDebug(built-in)]
 " enable builtin package
 packadd! termdebug
 "
-" [plugin: Netrw(builtin)]
+" [plugin: Netrw(built-in)]
 " tree style listing
-let g:netrw_liststyle= 3
+let g:netrw_liststyle=3
 " suppress banner
-let g:netrw_banner= 0
+let g:netrw_banner=0
 " specify initial size to 25%
-let g:netrw_winsize= 25
+let g:netrw_winsize=25
 
 " [plugin: Fugitive]
 " always show status line
@@ -274,7 +274,7 @@ set updatetime=100
 " always show sign column without redraw (default: auto)
 set signcolumn=yes
 " support bg for gitgutter signs (default: 0)
-let g:gitgutter_set_sign_backgrounds = 1
+let g:gitgutter_set_sign_backgrounds=1
 " set bg to signcolumn (default: NULL)
 hi SignColumn guibg=#122222
 
