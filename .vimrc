@@ -282,9 +282,8 @@ hi SignColumn guibg=#122222
 let g:tagbar_width=30
 " configure autoopen
 autocmd VimEnter * nested :call tagbar#autoopen(1)
-autocmd FileTYpe * nested :call tagbar#autoopen(0)
+autocmd FileType * nested :call tagbar#autoopen(0)
 autocmd BufEnter * nested :call tagbar#autoopen(0)
-" nnoremap <silent> <F8> :TagbarToggle<CR>
 
 
 "TODO: comment plugin
