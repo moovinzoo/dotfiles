@@ -254,7 +254,19 @@ endfunction
 "
 " [plugin: TermDebug]
 " https://github.com/vim/vim/blob/master/runtime/pack/dist/opt/termdebug
+" enable builtin package
 packadd! termdebug
 
 " [plugin: Fugitive]
-" https://github.com/tpope/vim-fugitive.git
+" https://github.com/tpope/vim-fugitive
+
+" [plugin: GitGutter]
+" https://github.com/airblade/vim-gitgutter
+" diffmarkers should appear automatically after a short delay (default:4000)
+set updatetime=100
+" always show sign column without redraw (default: auto)
+set signcolumn=yes
+" support bg for gitgutter signs (default: 0)
+let g:gitgutter_set_sign_backgrounds = 1
+" set bg to signcolumn (default: NULL)
+hi SignColumn guibg=#122222
