@@ -19,3 +19,6 @@
 [submodule ".vim/pack/majutsushi/start/tagbar"]
 	path = .vim/pack/majutsushi/start/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule ".vim/pack/mattn/start/vim-lsp-settings"]
+	path = .vim/pack/mattn/start/vim-lsp-settings
+	url = https://github.com/mattn/vim-lsp-settings
