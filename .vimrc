@@ -273,10 +273,6 @@ set laststatus=2
 set updatetime=100
 " always show sign column without redraw (default: auto)
 set signcolumn=yes
-" support bg for gitgutter signs (default: 0)
-let g:gitgutter_set_sign_backgrounds=1
-" set bg to signcolumn (default: NULL)
-hi SignColumn guibg=#122222
 
 " [plugin: Tagbar]
 let g:tagbar_width=30
