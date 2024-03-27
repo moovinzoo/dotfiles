@@ -4,19 +4,22 @@
 [submodule ".config/ranger/plugins/ranger_devicons"]
 	path = .config/ranger/plugins/ranger_devicons
 	url = https://github.com/alexanderjeurissen/ranger_devicons.git
-[submodule ".vim/pack/vim-wayland-clipboard/start/vim-wayland-clipboard"]
-	path = .vim/pack/vim-wayland-clipboard/start/vim-wayland-clipboard
+[submodule ".vim/pack/utils/start/vim-wayland-clipboard"]
+	path = .vim/pack/utils/start/vim-wayland-clipboard
 	url = https://github.com/jasonccox/vim-wayland-clipboard
-[submodule ".vim/pack/tpope/start/vim-fugitive"]
-	path = .vim/pack/tpope/start/vim-fugitive
+[submodule ".vim/pack/utils/start/vim-fugitive"]
+	path = .vim/pack/utils/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/pack/airblade/start/vim-gitgutter"]
-	path = .vim/pack/airblade/start/vim-gitgutter
+[submodule ".vim/pack/utils/start/vim-gitgutter"]
+	path = .vim/pack/utils/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-[submodule ".vim/pack/majutsushi/start/tagbar"]
-	path = .vim/pack/majutsushi/start/tagbar
+[submodule ".vim/pack/utils/start/tagbar"]
+	path = .vim/pack/utils/start/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule ".vim/pack/rhysd/start/vim-healthcheck"]
-	path = .vim/pack/rhysd/start/vim-healthcheck
+[submodule ".vim/pack/utils/start/vim-healthcheck"]
+	path = .vim/pack/utils/start/vim-healthcheck
 	url = https://github.com/rhysd/vim-healthcheck
-        ignore = dirty
+	ignore = dirty
+[submodule ".vim/pack/utils/start/commentary"]
+	path = .vim/pack/utils/start/commentary
+	url = https://github.com/tpope/vim-commentary
