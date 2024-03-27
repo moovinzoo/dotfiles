@@ -37,13 +37,7 @@ set encoding=utf8
 set termguicolors
 
 " use built-in colorscheme
-colorscheme industry
-
-" overwrite too much color-use in diff with restoring syntax highlight
-highlight DiffAdd    guifg=NONE guibg=MidnightBlue
-highlight DiffDelete guifg=NONE guibg=MidnightBlue
-highlight DiffChange guifg=NONE guibg=MidnightBlue
-highlight DiffText   guifg=NONE guibg=DarkRed
+colorscheme lunaperche
 
 " title
 set title
@@ -207,12 +201,24 @@ if 1
 
         augroup editFile
                 autocmd!
+
                 " built-in Smooth-scroll w/ <C-e>, <C-y> till the end line
                 autocmd FileType *
-                                        \ set wrap |
-                                        \ set linebreak |
-                                        \ set display=lastline |
-                                        \ set smoothscroll
+                        \ set wrap |
+                        \ set linebreak |
+                        \ set display=lastline |
+                        \ set smoothscroll
+        augroup END
+
+        augroup colorschemeOverride
+                autocmd!
+
+                " overwrite too much colors in diff with preserving syntax hi
+                autocmd ColorScheme *
+                        \ highlight DiffAdd    guifg=NONE guibg=MidnightBlue |
+                        \ highlight DiffDelete guifg=NONE guibg=MidnightBlue |
+                        \ highlight DiffChange guifg=NONE guibg=MidnightBlue |
+                        \ highlight DiffText   guifg=NONE guibg=DarkRed
         augroup END
 endif
 
