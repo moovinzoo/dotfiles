@@ -25,3 +25,6 @@
 [submodule ".vim/pack/prabirshrestha/start/vim-lsp"]
 	path = .vim/pack/prabirshrestha/start/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp
+[submodule ".vim/pack/rhysd/start/vim-healthcheck"]
+	path = .vim/pack/rhysd/start/vim-healthcheck
+	url = https://github.com/rhysd/vim-healthcheck
