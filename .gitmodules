@@ -28,3 +28,4 @@
 [submodule ".vim/pack/rhysd/start/vim-healthcheck"]
 	path = .vim/pack/rhysd/start/vim-healthcheck
 	url = https://github.com/rhysd/vim-healthcheck
+        ignore = dirty
