@@ -275,11 +275,17 @@ set updatetime=100
 set signcolumn=yes
 
 " [plugin: Tagbar]
+" limit width to 30
 let g:tagbar_width=30
+" hide help banner
+let g:tagbar_compact=2
+" to be sorted according to their order
+let g:tagbar_sort=0
 " configure autoopen
-autocmd VimEnter * nested :call tagbar#autoopen(1)
-autocmd FileType * nested :call tagbar#autoopen(0)
-autocmd BufEnter * nested :call tagbar#autoopen(0)
+" autocmd VimEnter * nested :call tagbar#autoopen(1)
 
 
 "TODO: comment plugin
+"TODO: Install vim-lsp
+"TODO: Install vim-lsp-settings
+"TODO: Install checkhealth
