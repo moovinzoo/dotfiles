@@ -1,7 +1,5 @@
 **/.netrwhist
 **/tags
-.viminfo
-.bash_history
 
 .config/zoom.conf
 .config/zoomus.conf
@@ -38,4 +36,8 @@
 .config/kitty/themes/*
 !.config/kitty/themes/current-theme.conf
 
+# exclude metadata
 .config/xournalpp/metadata
+
+# exclude private assets
+.config/qutebrowser/bookmarks/urls
