@@ -1,15 +1,12 @@
-[submodule ".vim/pack/vim-wayland-clipboard/start/vim-wayland-clipboard"]
-	path = .vim/pack/vim-wayland-clipboard/start/vim-wayland-clipboard
-	url = https://github.com/jasonccox/vim-wayland-clipboard
 [submodule ".bash-it"]
 	path = .bash-it
-	url = https://github.com/moovinzoo/bash-it.git
-[submodule ".bash_it"]
-	path = .bash_it
 	url = https://github.com/moovinzoo/bash-it.git
 [submodule ".config/ranger/plugins/ranger_devicons"]
 	path = .config/ranger/plugins/ranger_devicons
 	url = https://github.com/alexanderjeurissen/ranger_devicons.git
+[submodule ".vim/pack/vim-wayland-clipboard/start/vim-wayland-clipboard"]
+	path = .vim/pack/vim-wayland-clipboard/start/vim-wayland-clipboard
+	url = https://github.com/jasonccox/vim-wayland-clipboard
 [submodule ".vim/pack/tpope/start/vim-fugitive"]
 	path = .vim/pack/tpope/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -19,12 +16,6 @@
 [submodule ".vim/pack/majutsushi/start/tagbar"]
 	path = .vim/pack/majutsushi/start/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule ".vim/pack/mattn/start/vim-lsp-settings"]
-	path = .vim/pack/mattn/start/vim-lsp-settings
-	url = https://github.com/mattn/vim-lsp-settings
-[submodule ".vim/pack/prabirshrestha/start/vim-lsp"]
-	path = .vim/pack/prabirshrestha/start/vim-lsp
-	url = https://github.com/prabirshrestha/vim-lsp
 [submodule ".vim/pack/rhysd/start/vim-healthcheck"]
 	path = .vim/pack/rhysd/start/vim-healthcheck
 	url = https://github.com/rhysd/vim-healthcheck
