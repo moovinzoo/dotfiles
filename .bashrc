@@ -137,4 +137,8 @@ stty -ixon
 export $(envsubst < .env)
 . "$HOME/.cargo/env"
 
-complete -f -X '!*.@(mdx|MDX)' glow
+complete -f -X '!*.@(md|MD|mdx|MDX)' glow
+
+# Add gem bin directory in path
+export GEM_HOME="$(gem env user_gemhome)"
+export PATH="$PATH:$GEM_HOME/bin"
