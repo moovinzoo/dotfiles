@@ -21,7 +21,7 @@ filetype plugin on
 filetype indent on
 
 " support kitty terminal
-source $HOME/.vim/kitty_support.vim
+source $HOME/.vim/terminal/kitty_support.vim
 
 
 " ---------------------------------------------------------------------------
