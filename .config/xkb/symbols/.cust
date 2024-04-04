@@ -1,0 +1,18 @@
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+        include "us"
+        include "cust(swap_backslash_backspace)"
+        include "cust(swap_tilde_escape)"
+};
+
+partial modifier_keys
+xkb_symbols "swap_backslash_backspace" {
+        key <BKSP> { [ backslash, bar ] };
+        key <BKSL> { [ BackSpace, BackSpace ] };
+};
+
+partial modifier_keys
+xkb_symbols "swap_tilde_escape" {
+        key <TLDE> { [ Escape, Escape ] };
+        key <ESC> { [ grave, asciitilde ] };
+};
