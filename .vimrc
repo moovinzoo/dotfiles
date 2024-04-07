@@ -6,8 +6,8 @@
 " " SHELL: bash
 " " TERM: kitty
 " " XDG_SESSION_TYPE: wayland
-" " Netrw_gx_handler: qute
-" " LSP_client: lsp <https://github.com/yegappan/lsp>
+" " NETRW_GX_HANDLER: qute
+" " LSP_CLIENT: lsp <https://github.com/yegappan/lsp>
 
 
 " ---------------------------------------------------------------------------
