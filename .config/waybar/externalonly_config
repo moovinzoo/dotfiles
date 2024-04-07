@@ -31,6 +31,7 @@
         "class<firefox>": " ",
         "class<org.qutebrowser.qutebrowser>": " ",
         "class<kitty> title<.* - VIM>": " ",
+        "class<kitty> title<.* - NVIM>": " ",
         "class<kitty> title<ranger>": " ",
         /* "title<.*youtube.*>": "", // Windows whose titles contain "youtube" */
         /* "class<org.qutebrowser.qutebrowser> title<.*github.*>": "",
@@ -43,7 +44,9 @@
       "format": "{title} - {class}",
       "rewrite": {
         "^(?!VIM - kitty|ranger - kitty$)(.*) - kitty$": " $1",
+        "^(?!NVIM - kitty|ranger - kitty$)(.*) - kitty$": " $1",
         "(.*) - VIM - kitty": " $1",
+        "(.*) - NVIM - kitty": " $1",
         "ranger - kitty": " ranger",
         "(.*) - qutebrowser - org.qutebrowser.qutebrowser": " $1",
         "(.*) — Mozilla Firefox - firefox": " $1",
