@@ -153,6 +153,7 @@ nnoremap <Leader>; :windo if &diff \| diffoff \| else \| diffthis \| endif<CR>
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 inoremap <C-y> <C-r>0
+inoremap <C-c> <C-[>
 " insert current datetime
 " inoremap <C-'> <C-R>=InsertDateTime()<CR>
 
