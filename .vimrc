@@ -335,21 +335,16 @@ let g:tagbar_sort=0
 " configure autoopen
 " autocmd VimEnter * nested :call tagbar#autoopen(1)
 
-" [plugin: LSP](https://github.com/yegappan/lsp)
-packadd lsp
-" Lua language server
-call LspAddServer([#{
-                        \    name: 'lua-language-server',
-                        \    filetype: ['lua'],
-                        \    path: '/home/djlee/.local/share/nvim/mason/packages/lua-language-server/lua-language-server',
-                        \    args: []
-                        \  }])
-call LspOptionsSet(#{
-                        \       showDiagWithVirtualText: v:true,
-                        \       diagVirtualTextAlign: 'after',
-                        \ })
-
-
-"TODO: Install vim-lsp
-"TODO: Install vim-lsp-settings
-"TODO: Install checkhealth
+" " [plugin: LSP](https://github.com/yegappan/lsp)
+" packadd lsp
+" " Lua language server
+" call LspAddServer([#{
+"                         \    name: 'lua-language-server',
+"                         \    filetype: ['lua'],
+"                         \    path: '/home/djlee/.local/share/nvim/mason/packages/lua-language-server/lua-language-server',
+"                         \    args: []
+"                         \  }])
+" call LspOptionsSet(#{
+"                         \       showDiagWithVirtualText: v:true,
+"                         \       diagVirtualTextAlign: 'after',
+"                         \ })
