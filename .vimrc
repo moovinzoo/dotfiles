@@ -252,8 +252,8 @@ augroup SyncTerminalColorsWithOutside
 augroup END
 
 " use built-in colorscheme, weirdly placed here to be below augroup registered
-colorscheme lunaperche
-set background=dark
+colorscheme industry
+" set background=dark
 
 
 " ---------------------------------------------------------------------------
