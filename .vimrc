@@ -170,6 +170,11 @@ cnoremap <C-y> <C-r>0
 " ---------------------------------------------------------------------------
 " [functions]
 "
+" Enable to insert datetime format
+function! InsertDateTime() abort
+        return strftime("(%b %d %Y - %H:%M)")
+endfunction
+
 " Modify highlights for diff to be minimal
 function! ReplaceDiffHighlightsWithBlueAndRedOnly() abort
         highlight DiffAdd    guifg=NONE guibg=MidnightBlue
@@ -178,41 +183,39 @@ function! ReplaceDiffHighlightsWithBlueAndRedOnly() abort
         highlight DiffText   guifg=NONE guibg=DarkRed
 endfunction
 
-        augroup vimStartup
-                autocmd!
 
-                " When editing a file, always jump to the last known cursor
-                " position. Don't do it when the position is invalid, when
-                " inside an event handler (happens when dropping a file on
-                " gvim), for a commit or rebase message (likely a different
-                " one than last time), and when using xxd(1) to filter
-                " and edit binary files (it transforms input files back and
-                " forth, causing them to have dual nature, so to speak)
-                autocmd BufReadPost *
-                        \ let line = line("'\"")
-                        \ | if line >= 1 && line <= line("$")
-                        \      && &filetype !~# 'commit'
-                        \      && index(['xxd', 'gitrebase'], &filetype) == -1
-                        \ |   execute "normal! g`\""
-                        \ | endif
-
-        augroup END
-
-        augroup editFile
-                autocmd!
-
-                " built-in Smooth-scroll w/ <C-e>, <C-y> till the end line
-                autocmd FileType *
-                        \ set wrap |
-                        \ set linebreak |
-                        \ set display=lastline |
-                        \ set smoothscroll
-        augroup END
 
 " ---------------------------------------------------------------------------
 " [augroups]
 " compiled with the +eval feature, revert with ':autocmd! sth' 
 "
+augroup AlwaysJumpToTheLastKnownCursorPosition
+        autocmd!
+        " When editing a file, always jump to the last known cursor
+        " position. Don't do it when the position is invalid, when
+        " inside an event handler (happens when dropping a file on
+        " gvim), for a commit or rebase message (likely a different
+        " one than last time), and when using xxd(1) to filter
+        " and edit binary files (it transforms input files back and
+        " forth, causing them to have dual nature, so to speak)
+        autocmd BufReadPost *
+                                \ let line = line("'\"")
+                                \ | if line >= 1 && line <= line("$")
+                                \      && &filetype !~# 'commit'
+                                \      && index(['xxd', 'gitrebase'], &filetype) == -1
+                                \ |   execute "normal! g`\""
+                                \ | endif
+augroup END
+
+augroup SmoothScrollTillEndOfDocument
+        autocmd!
+        " built-in Smooth-scroll w/ <C-e>, <C-y> till the end line
+        autocmd FileType *
+                                \ set wrap |
+                                \ set linebreak |
+                                \ set display=lastline |
+                                \ set smoothscroll
+augroup END
 
 " use built-in colorscheme, weirdly placed here to be below augroup registered
 colorscheme lunaperche
@@ -238,17 +241,8 @@ endif
 " Revert with: ":delcommand DiffMode".
 " Close with: ":q".
 if !exists(":DiffMode")
-    command! DiffMode windo if &diff | diffoff | else | diffthis | endif
+        command! DiffMode windo if &diff | diffoff | else | diffthis | endif
 endif
-
-
-" ---------------------------------------------------------------------------
-" [functions]
-"
-" [function: InsertDateTime]
-function! InsertDateTime()
-        return strftime("(%b %d %Y - %H:%M)")
-endfunction
 
 
 " ---------------------------------------------------------------------------
