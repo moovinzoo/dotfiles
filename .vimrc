@@ -1,6 +1,7 @@
 " Author: moovinzoo@gmail.com
 " Last Modified: (Mar 25 2024 - 22:37)
 " Reference: The Vim Project <https://github.com/vim/vim>
+" Guide: Vimrc checklist <https://www.reddit.com/r/vim/wiki/vimrctips/>
 " Environment:
 " " SHELL: bash
 " " TERM: kitty
@@ -11,17 +12,11 @@
 " ---------------------------------------------------------------------------
 " [basic]
 "
-" use vim mode (not Vi-compatible)
-set nocompatible
-
 " filetype plugins
 filetype plugin on
 
 " load indent files, to automatically do language-dependent indenting
 filetype indent on
-
-" support kitty terminal
-source $HOME/.vim/terminal/kitty_support.vim
 
 
 " ---------------------------------------------------------------------------
@@ -47,9 +42,6 @@ set ruler
 
 " highlight current line
 set cursorline
-
-" show @@@ in the last line if it is truncated
-set display=truncate
 
 " do not equalize the size of the buffers
 set noequalalways
@@ -93,11 +85,15 @@ set ffs=unix,dos,mac
 " ---------------------------------------------------------------------------
 " [text editing]
 "
-" tab indent: 8 and no tabs (replace by spaces)
-set tabstop=8
+" tab size
+" - for indenting lines; cindent, shiftwidth(>>)
+" - for pressing <Tab>; expandtab, smarttab, softtabstop
+" - for the visual length of a tab character(\t), whether it's from
+" pressing the Tab key or not; tabstop
+set tabstop=16
+set softtabstop=8
 set shiftwidth=8
 set expandtab
-set softtabstop=8
 
 " C-style indent
 set cindent
