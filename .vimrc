@@ -152,7 +152,7 @@ nnoremap <Leader>; :windo if &diff \| diffoff \| else \| diffthis \| endif<CR>
 " restore shell keymaps in insert mode
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
-cnoremap <C-y> <C-r>0
+inoremap <C-y> <C-r>0
 " insert current datetime
 " inoremap <C-'> <C-R>=InsertDateTime()<CR>
 
