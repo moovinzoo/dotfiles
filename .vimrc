@@ -7,6 +7,7 @@
 " " TERM: kitty
 " " XDG_SESSION_TYPE: wayland
 " " Netrw_gx_handler: qute
+" " LSP_client: lsp <https://github.com/yegappan/lsp>
 
 
 " ---------------------------------------------------------------------------
@@ -312,6 +313,20 @@ let g:tagbar_compact=2
 let g:tagbar_sort=0
 " configure autoopen
 " autocmd VimEnter * nested :call tagbar#autoopen(1)
+
+" [plugin: LSP](https://github.com/yegappan/lsp)
+packadd lsp
+" Lua language server
+call LspAddServer([#{
+                        \    name: 'lua-language-server',
+                        \    filetype: ['lua'],
+                        \    path: '/home/djlee/.local/share/nvim/mason/packages/lua-language-server/lua-language-server',
+                        \    args: []
+                        \  }])
+call LspOptionsSet(#{
+                        \       showDiagWithVirtualText: v:true,
+                        \       diagVirtualTextAlign: 'after',
+                        \ })
 
 
 "TODO: comment plugin
