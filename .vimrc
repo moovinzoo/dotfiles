@@ -350,7 +350,6 @@ call LspOptionsSet(#{
                         \ })
 
 
-"TODO: comment plugin
 "TODO: Install vim-lsp
 "TODO: Install vim-lsp-settings
 "TODO: Install checkhealth
