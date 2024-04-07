@@ -303,6 +303,7 @@ set laststatus=2
 set updatetime=100
 " always show sign column without redraw (default: auto)
 set signcolumn=yes
+let g:gitgutter_preview_win_floating = 1
 
 " [plugin: Tagbar]
 " limit width to 30
