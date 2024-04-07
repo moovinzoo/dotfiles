@@ -168,7 +168,7 @@ cnoremap <C-y> <C-r>0
 
 
 " ---------------------------------------------------------------------------
-" [augroups]
+" [functions]
 "
 " Modify highlights for diff to be minimal
 function! ReplaceDiffHighlightsWithBlueAndRedOnly() abort
@@ -178,8 +178,6 @@ function! ReplaceDiffHighlightsWithBlueAndRedOnly() abort
         highlight DiffText   guifg=NONE guibg=DarkRed
 endfunction
 
-" compiled with the +eval feature, revert with ':autocmd! sth' 
-if 1
         augroup vimStartup
                 autocmd!
 
@@ -211,8 +209,11 @@ if 1
                         \ set smoothscroll
         augroup END
 
+" ---------------------------------------------------------------------------
+" [augroups]
+" compiled with the +eval feature, revert with ':autocmd! sth' 
+"
 
-endif
 " use built-in colorscheme, weirdly placed here to be below augroup registered
 colorscheme lunaperche
 set background=dark
