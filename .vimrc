@@ -148,6 +148,7 @@ nnoremap Q :q<CR>
 nnoremap <leader>q :q!<CR>
 nnoremap <leader>Q :qa<CR>
 nnoremap <Leader>; :windo if &diff \| diffoff \| else \| diffthis \| endif<CR>
+nnoremap <leader>c :call HandyCommit()<CR>
 
 " [mapping: insert mode]
 " restore shell keymaps in insert mode
@@ -198,6 +199,25 @@ function! RestoreAnsiColorsThatCurrentTermUses() abort
                                 \ '#9a9996', '#f66151', '#8ff0a4', '#ffa348',
                                 \ '#99c1f1', '#dc8add', '#93ddc2', '#f6f5f4',
                                 \]
+endfunction
+
+function! HandyCommit() abort
+    let message = input("Commit msg: ")
+
+    redraw!
+
+    if strlen(message) > 0
+        " Escape double quotes in the message
+        let message = substitute(message, '"', '\\"', 'g')
+        " Execute the git commit command
+        let cmd = 'git commit -m "' . message . '"'
+        let output = system(cmd)
+
+        " Show feedback in the command line
+        echo output
+    else
+        echoerr "Error: Commit message cannot be empty"
+    endif
 endfunction
 
 " ---------------------------------------------------------------------------
