@@ -134,8 +134,8 @@ eval "$(thefuck --alias)"
 stty -ixon
 
 # Set global env
-export $(envsubst < .env)
-. "$HOME/.cargo/env"
+export $(envsubst < $HOME/.env)
+# . "$HOME/.cargo/env"
 
 complete -f -X '!*.@(md|MD|mdx|MDX)' glow
 
