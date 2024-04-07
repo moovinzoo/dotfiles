@@ -231,6 +231,17 @@ augroup SmoothScrollTillEndOfDocument
                                 \ set smoothscroll
 augroup END
 
+augroup EnableMinimalDiffHighlights
+        autocmd!
+        " only use 2-colors in diff-view
+        autocmd ColorScheme * call ReplaceDiffHighlightsWithBlueAndRedOnly()
+augroup END
+
+augroup EnableUnderlineOnCursorLine
+        autocmd!
+        " only use underline for cursorline
+        autocmd ColorScheme * call ReplaceCursorLineHighlight()
+augroup END
 " use built-in colorscheme, weirdly placed here to be below augroup registered
 colorscheme lunaperche
 set background=dark
