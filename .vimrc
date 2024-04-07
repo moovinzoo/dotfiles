@@ -184,7 +184,20 @@ function! ReplaceDiffHighlightsWithBlueAndRedOnly() abort
         highlight DiffText   guifg=NONE guibg=DarkRed
 endfunction
 
+" Modify highlights for cursorline not to interupt diff-highlighted lines
+function! ReplaceCursorLineHighlight() abort
+        highlight CursorLine cterm=underline ctermbg=NONE guibg=NONE
+endfunction
 
+" Hard-copy kitty term's current theme(adwaita)
+function! RestoreAnsiColorsThatCurrentTermUses() abort
+        let g:terminal_ansi_colors = [
+                                \ '#000000', '#ed333b', '#57e389', '#ff7800',
+                                \ '#62a0ea', '#9141ac', '#5bc8af', '#deddda',
+                                \ '#9a9996', '#f66151', '#8ff0a4', '#ffa348',
+                                \ '#99c1f1', '#dc8add', '#93ddc2', '#f6f5f4',
+                                \]
+endfunction
 
 " ---------------------------------------------------------------------------
 " [augroups]
