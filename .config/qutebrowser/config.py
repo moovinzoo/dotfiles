@@ -238,7 +238,7 @@ c.window.transparent = False
 
 # Default zoom level.
 # Type: Perc
-c.zoom.default = '200%'
+c.zoom.default = '250%'
 
 # Background color for webpages if unset (or empty to use the theme's
 # color).
