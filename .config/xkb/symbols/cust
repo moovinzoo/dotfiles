@@ -1,5 +1,6 @@
-// Customized Keyboard layouts for Lenovo Trackpoint2
-default partial alphanumeric_keys xkb_symbols "basic" {
+// vim:syntax=xkb
+default partial alphanumeric_keys
+xkb_symbols "basic" {
         include "us"
         include "cust(swap_backslash_backspace)"
         include "cust(sub_tilde_escape)"
