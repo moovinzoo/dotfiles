@@ -86,8 +86,8 @@ set ffs=unix,dos,mac
 " tab size
 " - for indenting lines; cindent, shiftwidth(>>)
 " - for pressing <Tab>; expandtab, smarttab, softtabstop
-" - for the visual length of a tab character(\t), whether it's from
-" pressing the Tab key or not; tabstop
+" - for the visual length of a tab character(\t),
+"   whether it's from pressing the Tab key or not; tabstop
 set tabstop=16
 set softtabstop=8
 set shiftwidth=8
