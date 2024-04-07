@@ -31,9 +31,6 @@ set encoding=utf8
 " enable true colors
 set termguicolors
 
-" use built-in colorscheme
-colorscheme lunaperche
-
 " title
 set title
 
@@ -173,6 +170,14 @@ cnoremap <C-y> <C-r>0
 " ---------------------------------------------------------------------------
 " [augroups]
 "
+" Modify highlights for diff to be minimal
+function! ReplaceDiffHighlightsWithBlueAndRedOnly() abort
+        highlight DiffAdd    guifg=NONE guibg=MidnightBlue
+        highlight DiffDelete guifg=NONE guibg=MidnightBlue
+        highlight DiffChange guifg=NONE guibg=MidnightBlue
+        highlight DiffText   guifg=NONE guibg=DarkRed
+endfunction
+
 " compiled with the +eval feature, revert with ':autocmd! sth' 
 if 1
         augroup vimStartup
@@ -206,17 +211,11 @@ if 1
                         \ set smoothscroll
         augroup END
 
-        augroup colorschemeOverride
-                autocmd!
 
-                " overwrite too much colors in diff with preserving syntax hi
-                autocmd ColorScheme *
-                        \ highlight DiffAdd    guifg=NONE guibg=MidnightBlue |
-                        \ highlight DiffDelete guifg=NONE guibg=MidnightBlue |
-                        \ highlight DiffChange guifg=NONE guibg=MidnightBlue |
-                        \ highlight DiffText   guifg=NONE guibg=DarkRed
-        augroup END
 endif
+" use built-in colorscheme, weirdly placed here to be below augroup registered
+colorscheme lunaperche
+set background=dark
 
 
 " ---------------------------------------------------------------------------
