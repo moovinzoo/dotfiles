@@ -190,7 +190,7 @@ function! ReplaceCursorLineHighlight() abort
         highlight CursorLine cterm=underline ctermbg=NONE guibg=NONE
 endfunction
 
-" Hard-copy kitty term's current theme(adwaita)
+" Hard-copy kitty-term's current theme(adwaita)
 function! RestoreAnsiColorsThatCurrentTermUses() abort
         let g:terminal_ansi_colors = [
                                 \ '#000000', '#ed333b', '#57e389', '#ff7800',
