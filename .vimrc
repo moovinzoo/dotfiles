@@ -242,6 +242,14 @@ augroup EnableUnderlineOnCursorLine
         " only use underline for cursorline
         autocmd ColorScheme * call ReplaceCursorLineHighlight()
 augroup END
+
+" Note: should improve 
+augroup SyncTerminalColorsWithOutside
+        autocmd!
+        " restore 16 colors that is ruined by using termguicolors option
+        autocmd ColorScheme * call RestoreAnsiColorsThatCurrentTermUses()
+augroup END
+
 " use built-in colorscheme, weirdly placed here to be below augroup registered
 colorscheme lunaperche
 set background=dark
