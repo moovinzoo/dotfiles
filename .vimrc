@@ -202,7 +202,7 @@ function! RestoreAnsiColorsThatCurrentTermUses() abort
 endfunction
 
 function! HandyCommit() abort
-    let message = input("Commit msg: ")
+    let message = input("Commit) ")
 
     redraw!
 
