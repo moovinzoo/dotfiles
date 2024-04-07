@@ -41,3 +41,4 @@
 
 # exclude private assets
 .config/qutebrowser/bookmarks/urls
+.config/lazygit/state.yml
