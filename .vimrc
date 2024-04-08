@@ -264,7 +264,6 @@ augroup EnableUnderlineOnCursorLine
         autocmd ColorScheme * call ReplaceCursorLineHighlight()
 augroup END
 
-" Note: should improve 
 augroup SyncTerminalColorsWithOutside
         autocmd!
         " restore 16 colors that is ruined by using termguicolors option
