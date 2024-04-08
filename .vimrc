@@ -202,22 +202,22 @@ function! RestoreAnsiColorsThatCurrentTermUses() abort
 endfunction
 
 function! HandyCommit() abort
-    let message = input("Commit) ")
+        let message = input("Commit) ")
 
-    redraw!
+        redraw!
 
-    if strlen(message) > 0
-        " Escape double quotes in the message
-        let message = substitute(message, '"', '\\"', 'g')
-        " Execute the git commit command
-        let cmd = 'git commit -m "' . message . '"'
-        let output = system(cmd)
+        if strlen(message) > 0
+                " Escape double quotes in the message
+                let message = substitute(message, '"', '\\"', 'g')
+                " Execute the git commit command
+                let cmd = 'git commit -m "' . message . '"'
+                let output = system(cmd)
 
-        " Show feedback in the command line
-        echo output
-    else
-        echoerr "Error: Commit message cannot be empty"
-    endif
+                " Show feedback in the command line
+                echo output
+        else
+                echoerr "Error: Commit message cannot be empty"
+        endif
 endfunction
 
 " ---------------------------------------------------------------------------
