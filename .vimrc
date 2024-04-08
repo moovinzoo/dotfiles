@@ -191,6 +191,11 @@ function! ReplaceCursorLineHighlight() abort
         highlight CursorLine cterm=underline ctermbg=NONE guibg=NONE
 endfunction
 
+" Dim down sign-column
+function! DimDownSignColumnHighlight() abort
+        highlight SignColumn guibg=#111111
+endfunction
+
 " Hard-copy kitty-term's current theme(adwaita)
 function! RestoreAnsiColorsThatCurrentTermUses() abort
         let g:terminal_ansi_colors = [
@@ -270,8 +275,13 @@ augroup SyncTerminalColorsWithOutside
         autocmd ColorScheme * call RestoreAnsiColorsThatCurrentTermUses()
 augroup END
 
+augroup ReplaceSignColumnHighlightForPabloColorScheme
+        autocmd!
+        autocmd ColorScheme pablo call DimDownSignColumnHighlight()
+augroup END
+
 " use built-in colorscheme, weirdly placed here to be below augroup registered
-colorscheme industry
+colorscheme pablo
 " set background=dark
 
 
