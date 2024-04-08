@@ -355,6 +355,13 @@ call LspAddServer([#{
                         \ path: '/home/djlee/.vim/server/lua-language-server/lua-language-server',
                         \ args: []
                         \  }])
+" " Java (https://github.com/eclipse-jdtls/eclipse.jdt.ls?tab=readme-ov-file)
+call LspAddServer([#{
+                        \ name: 'jdtls',
+                        \ filetype: ['java'],
+                        \ path: '/home/djlee/.vim/server/jdtls/jdtls',
+                        \ args: []
+                        \  }])
 " Options
 call LspOptionsSet(#{
                         \ showDiagWithVirtualText: v:true,
