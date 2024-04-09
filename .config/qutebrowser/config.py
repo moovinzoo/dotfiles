@@ -275,3 +275,4 @@ c.fonts.default_family = 'GoMono Nerd Font'
 c.fonts.default_size = '18pt'
 c.fonts.web.family.standard = 'GoMono Nerd Font'
 c.fonts.web.size.default = 20
+config.unbind('<Ctrl-a>', mode='normal')
