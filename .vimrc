@@ -1,15 +1,4 @@
 " Author: moovinzoo@gmail.com
-" Last Modified: (Mar 25 2024 - 22:37)
-" Reference: The Vim Project <https://github.com/vim/vim>
-" Guide: Vimrc checklist <https://www.reddit.com/r/vim/wiki/vimrctips/>
-" Environment:
-" " SHELL: bash
-" " TERM: kitty
-" " XDG_SESSION_TYPE: wayland
-" " NETRW_GX_HANDLER: qute
-" " LSP_CLIENT: lsp <https://github.com/yegappan/lsp>
-
-
 " ---------------------------------------------------------------------------
 " [basic]
 "
@@ -27,6 +16,16 @@ filetype indent on
 syntax enable
 
 " utf encoding
+" Last Modified: (Apr 09 2024 - 01:37)
+" Maintainer: The Vim Project <https://github.com/vim/vim>
+" Reference: Vimrc checklist <https://www.reddit.com/r/vim/wiki/vimrctips/>
+" Shell: bash
+" Terminal: kitty
+" Session: wayland
+" LSP Client: @yegappan/lsp
+" LSP Server Installer: Neovim/Mason
+
+vim9script
 set encoding=utf8
 
 " enable true colors
