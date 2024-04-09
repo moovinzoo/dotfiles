@@ -118,9 +118,6 @@ cnoremap <C-y> <C-r>0
 tnoremap <Esc> <C-\><C-n>
 
 
-
-function! HandyCommit() abort
-        let message = input("Commit) ")
 # ----------------------------------------------------------------------------
 # Functions
 # ----------------------------------------------------------------------------
@@ -137,24 +134,16 @@ def ReplaceDiffHighlightsWithBlueAndRedOnly()
         highlight DiffText   guibg=DarkRed
 enddef
 
-        redraw!
 def ReplaceCursorLineHighlightWithUnderline()
         highlight clear CursorLine
         highlight CursorLine cterm=underline gui=underline
 enddef
 
-        if strlen(message) > 0
-                " Escape double quotes in the message
-                let message = substitute(message, '"', '\\"', 'g')
-                " Execute the git commit command
-                let cmd = 'git commit -m "' . message . '"'
-                let output = system(cmd)
 def RemoveSignColumnHighlight()
         highlight clear SignColumn
         highlight! link SignColumn Normal
 enddef
 
-                " Show feedback in the command line
 def RestoreAnsiColorsThatCurrentTermUses()
         g:terminal_ansi_colors = [
                 '#000000', '#ed333b', '#57e389', '#ff7800',
@@ -164,11 +153,19 @@ def RestoreAnsiColorsThatCurrentTermUses()
         ]
 enddef
 
+# User-defines
+def HandyCommit()
+        var message = input("Commit) ")
+        redraw!
+        if strlen(message) > 0
+                message = substitute(message, '"', '\\"', 'g')
+                var cmd = 'git commit -m "' .. message .. '"'
+                var output = system(cmd)
                 echo output
         else
                 echoerr "Error: Commit message cannot be empty"
         endif
-endfunction
+enddef
 
 " ---------------------------------------------------------------------------
 " [augroups]
