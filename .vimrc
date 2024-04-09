@@ -153,6 +153,15 @@ def RestoreAnsiColorsThatCurrentTermUses()
         ]
 enddef
 
+def JumpToTheLastKnownCursorLocation()
+        var line = line("'\"")
+        if line >= 1 && line <= line("$")
+                        && &filetype !~# 'commit'
+                        && index(['xxd', 'gitrebase'], &filetype) == -1
+                execute "normal! g`\""
+        endif
+enddef
+
 # User-defines
 def HandyCommit()
         var message = input("Commit) ")
