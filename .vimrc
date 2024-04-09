@@ -228,18 +228,13 @@ augroup END
 # [TermDebug(built-in]
 packadd! termdebug
 
+# Netrw(built-in)]
+g:netrw_liststyle = 3                   # tree-style listing
+g:netrw_banner = 0                      # suppress help
+g:netrw_winsize = 25                    # specify initial size to 25%
 
 
 
-
-"
-" [plugin: Netrw(built-in)]
-" tree style listing
-let g:netrw_liststyle=3
-" suppress banner
-let g:netrw_banner=0
-" specify initial size to 25%
-let g:netrw_winsize=25
 
 " [plugin: Fugitive]
 " always show status line
