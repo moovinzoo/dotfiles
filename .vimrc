@@ -240,16 +240,10 @@ set updatetime=100                      # diffmarkers (default: 4000)
 # TODO: how to focus on popup window?
 g:gitgutter_preview_win_floating = 1
 
-
-" [plugin: Tagbar]
-" limit width to 30
-let g:tagbar_width=30
-" hide help banner
-let g:tagbar_compact=2
-" to be sorted according to their order
-let g:tagbar_sort=0
-" configure autoopen
-" autocmd VimEnter * nested :call tagbar#autoopen(1)
+# Tagbar
+g:tagbar_width = 30                     # limit width to 30
+g:tagbar_compact = 2                    # suppress help
+g:tagbar_sort = 0
 
 " [plugin: LSP](https://github.com/yegappan/lsp)
 " Enable package
