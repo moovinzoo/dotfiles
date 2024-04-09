@@ -245,11 +245,8 @@ g:tagbar_width = 30                     # limit width to 30
 g:tagbar_compact = 2                    # suppress help
 g:tagbar_sort = 0
 
-" [plugin: LSP](https://github.com/yegappan/lsp)
-" Enable package
+# LSP (https://github.com/yegappan/lsp)
 packadd lsp
-" Replace keyword-prg(K) action from man to LspHover
-set keywordprg=:LspHover
 " Servers
 " " Lua (https://github.com/luals/lua-language-server)
 call LspAddServer([#{
