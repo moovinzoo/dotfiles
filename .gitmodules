@@ -23,3 +23,6 @@
 [submodule ".vim/pack/utils/start/commentary"]
 	path = .vim/pack/utils/start/commentary
 	url = https://github.com/tpope/vim-commentary
+[submodule ".vim/pack/protocols/opt/lsp"]
+	path = .vim/pack/protocols/opt/lsp
+	url = https://github.com/yegappan/lsp
