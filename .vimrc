@@ -202,20 +202,22 @@ augroup RestoreLastCursorLocation
         }
 augroup END
 
+augroup MinimalizeHighlights
         autocmd!
+        autocmd ColorScheme * {
                 ReplaceDiffHighlightsWithBlueAndRedOnly()
                 ReplaceCursorLineHighlightWithUnderline()
                 RemoveSignColumnHighlight()
                 RestoreAnsiColorsThatCurrentTermUses()
+        }
 augroup END
+colorscheme 256_noir
+#set background=dark
 
         autocmd!
 augroup END
 
 
-" use built-in colorscheme, weirdly placed here to be below augroup registered
-colorscheme pablo
-" set background=dark
 
 
 
