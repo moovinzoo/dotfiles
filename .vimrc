@@ -267,7 +267,6 @@ g:LspOptionsSet({
         diagVirtualTextAlign: 'after',
 })
 
-# TODO: change tpope/vim-commentary's vimrc character from " to #
 # TODO: bootstrap @LSP/inlay-hint features
 # TODO: setup @LSP/initializationOptions for jdtls to meet perfectly
 # TODO: consider to use plugin/CtrlP
