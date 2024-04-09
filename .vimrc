@@ -117,13 +117,6 @@ cnoremap <C-y> <C-r>0
 
 tnoremap <Esc> <C-\><C-n>
 
-" ---------------------------------------------------------------------------
-" [functions]
-"
-" Enable to insert datetime format
-function! InsertDateTime() abort
-        return strftime("(%b %d %Y - %H:%M)")
-endfunction
 
 " Modify highlights for diff to be minimal
 function! ReplaceDiffHighlightsWithBlueAndRedOnly() abort
@@ -155,6 +148,9 @@ endfunction
 
 function! HandyCommit() abort
         let message = input("Commit) ")
+# ----------------------------------------------------------------------------
+# Functions
+# ----------------------------------------------------------------------------
 
         redraw!
 
