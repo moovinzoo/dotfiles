@@ -1,15 +1,5 @@
 " Author: moovinzoo@gmail.com
 " ---------------------------------------------------------------------------
-" [basic]
-"
-" filetype plugins
-filetype plugin on
-
-" load indent files, to automatically do language-dependent indenting
-filetype indent on
-
-
-" ---------------------------------------------------------------------------
 " [appearance]
 "
 " syntax highlighting
@@ -26,6 +16,7 @@ syntax enable
 " LSP Server Installer: Neovim/Mason
 
 vim9script
+filetype plugin indent on
 set encoding=utf8
 
 " enable true colors
