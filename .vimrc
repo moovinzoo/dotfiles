@@ -118,12 +118,6 @@ cnoremap <C-y> <C-r>0
 tnoremap <Esc> <C-\><C-n>
 
 
-
-" Modify highlights for cursorline not to interupt diff-highlighted lines
-function! ReplaceCursorLineHighlight() abort
-        highlight CursorLine cterm=underline ctermbg=NONE guibg=NONE
-endfunction
-
 " Dim down sign-column
 function! DimDownSignColumnHighlight() abort
         highlight SignColumn guibg=#111111
@@ -158,6 +152,10 @@ def ReplaceDiffHighlightsWithBlueAndRedOnly()
 enddef
 
         redraw!
+def ReplaceCursorLineHighlightWithUnderline()
+        highlight clear CursorLine
+        highlight CursorLine cterm=underline gui=underline
+enddef
 
         if strlen(message) > 0
                 " Escape double quotes in the message
