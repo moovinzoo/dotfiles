@@ -118,13 +118,6 @@ cnoremap <C-y> <C-r>0
 tnoremap <Esc> <C-\><C-n>
 
 
-" Modify highlights for diff to be minimal
-function! ReplaceDiffHighlightsWithBlueAndRedOnly() abort
-        highlight DiffAdd    guifg=NONE guibg=MidnightBlue
-        highlight DiffDelete guifg=NONE guibg=MidnightBlue
-        highlight DiffChange guifg=NONE guibg=MidnightBlue
-        highlight DiffText   guifg=NONE guibg=DarkRed
-endfunction
 
 " Modify highlights for cursorline not to interupt diff-highlighted lines
 function! ReplaceCursorLineHighlight() abort
@@ -151,6 +144,18 @@ function! HandyCommit() abort
 # ----------------------------------------------------------------------------
 # Functions
 # ----------------------------------------------------------------------------
+def ReplaceDiffHighlightsWithBlueAndRedOnly()
+        # leave only sytnax-highlights on diffs
+        highlight clear DiffAdd
+        highlight clear DiffDelete
+        highlight clear DiffChange
+        highlight clear DiffText
+        # and use blue, red backgrounds behind syntax-highlighted text
+        highlight DiffAdd    guibg=MidnightBlue
+        highlight DiffDelete guibg=MidnightBlue
+        highlight DiffChange guibg=MidnightBlue
+        highlight DiffText   guibg=DarkRed
+enddef
 
         redraw!
 
