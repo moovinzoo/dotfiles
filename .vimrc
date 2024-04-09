@@ -1,11 +1,4 @@
 " Author: moovinzoo@gmail.com
-" ---------------------------------------------------------------------------
-" [appearance]
-"
-" syntax highlighting
-syntax enable
-
-" utf encoding
 " Last Modified: (Apr 09 2024 - 01:37)
 " Maintainer: The Vim Project <https://github.com/vim/vim>
 " Reference: Vimrc checklist <https://www.reddit.com/r/vim/wiki/vimrctips/>
@@ -19,37 +12,14 @@ vim9script
 filetype plugin indent on
 set encoding=utf8
 
-" enable true colors
+# ----------------------------------------------------------------------------
+# Appearance
+# ----------------------------------------------------------------------------
+syntax enable
 set termguicolors
-
-" title
 set title
-
-" show current position
 set ruler
-
-" highlight current line
 set cursorline
-
-" do not equalize the size of the buffers
-set noequalalways
-
-" wildcard matching
-set wildmenu
-
-" display incomplete commands
-set showcmd
-
-" no redraw during execution of macros
-set lazyredraw
-
-" visual: show matching brackets
-set showmatch
-set mat=5
-
-" no sound/blink on errors
-set noerrorbells
-set novisualbell
 
 
 " ---------------------------------------------------------------------------
