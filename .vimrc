@@ -187,12 +187,12 @@ enddef
 # ----------------------------------------------------------------------------
 augroup SmoothScrollTillEndOfDocument
         autocmd!
-        " built-in Smooth-scroll w/ <C-e>, <C-y> till the end line
-        autocmd FileType *
-                                \ set wrap |
-                                \ set linebreak |
-                                \ set display=lastline |
-                                \ set smoothscroll
+        autocmd FileType * {
+                set wrap |
+                set linebreak |
+                set display=lastline |
+                set smoothscroll
+        }
 augroup END
 
 augroup EnableMinimalDiffHighlights
