@@ -233,12 +233,9 @@ g:netrw_liststyle = 3                   # tree-style listing
 g:netrw_banner = 0                      # suppress help
 g:netrw_winsize = 25                    # specify initial size to 25%
 
+# Fugitive
 
 
-
-" [plugin: Fugitive]
-" always show status line
-set laststatus=2
 
 " [plugin: GitGutter]
 " diffmarkers should appear automatically after a short delay (default:4000)
