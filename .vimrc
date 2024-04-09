@@ -267,6 +267,7 @@ g:LspOptionsSet({
         diagVirtualTextAlign: 'after',
 })
 
+# TODO: commit all improves
 # TODO: merge feat/* branch
 # TODO: change tpope/vim-commentary's vimrc character from " to #
 # TODO: bootstrap @LSP/inlay-hint features
