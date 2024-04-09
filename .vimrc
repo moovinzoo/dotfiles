@@ -176,6 +176,11 @@ def HandyCommit()
         endif
 enddef
 
+def DefineDiffOrigCommand()
+        execute 'command! DiffOrig vert new | set bt=nofile | r ++edit '
+                .. expand("%p") .. ' |: 0d | diffthis | wincmd p | diffthis'
+enddef
+
 
 # ----------------------------------------------------------------------------
 # Autocmds
@@ -222,19 +227,6 @@ colorscheme pablo
 " set background=dark
 
 
-" ---------------------------------------------------------------------------
-" [commands]
-"
-" [command: DiffOrig]
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-" Revert with: ":delcommand DiffOrig".
-" Close with: ":only", <C-W>o.
-if !exists(":DiffOrig")
-        command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_
-                                \ | diffthis | wincmd p | diffthis
-endif
 
 " [command: DiffMode]
 " Convenient command to see the difference between the two buffers.
