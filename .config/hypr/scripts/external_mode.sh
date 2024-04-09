@@ -16,3 +16,6 @@ waybar -c $HOME/.config/waybar/externalonly_config &
 
 # Setup wallpaper
 swaybg -m center -i $HOME/.config/hypr/wallpapers/output_28.jpg -c "#000000" &
+
+# run input-remapper to load all configs
+input-remapper-control --command autoload

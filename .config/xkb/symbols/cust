@@ -4,8 +4,7 @@ xkb_symbols "basic" {
         include "us"
         include "cust(swap_backslash_backspace)"
         include "cust(sub_tilde_escape)"
-        include "cust(sub_insert_bar)"
-        include "cust(sub_delete_tilde)"
+        //include "cust(sub_eject_tilde)"
 };
 
 partial modifier_keys
@@ -19,12 +18,20 @@ xkb_symbols "sub_tilde_escape" {
         key <TLDE> { [ Escape, Escape ] };
 };
 
-partial modifier_keys
-xkb_symbols "sub_insert_bar" {
-        key <INS> { [ backslash, bar ] };
-};
+// partial modifier_keys
+// xkb_symbols "sub_insert_bar" {
+//         key <INS> { [ backslash, bar ] };
+// };
+// 
+// partial modifier_keys
+// xkb_symbols "sub_delete_tilde" {
+//         key <DELE> { [ grave, asciitilde ] };
+// };
 
+//partial alphanumeric_keys
 partial modifier_keys
-xkb_symbols "sub_delete_tilde" {
-        key <DELE> { [ grave, asciitilde ] };
+xkb_symbols "sub_eject_tilde" {
+        key <I169> { [ backslash, bar ] };
 };
+        // key <I169> { [ grave, asciitilde ] };
+        //key <XF86Eject> { [ grave, asciitilde ] };

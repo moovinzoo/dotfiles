@@ -1,0 +1,6 @@
+{
+    "version": "2.0.1",
+    "autoload": {
+        "Logitech K811 Keyboard": "new preset"
+    }
+}
