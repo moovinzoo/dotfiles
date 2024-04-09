@@ -195,11 +195,8 @@ augroup SmoothScrollTillEndOfDocument
         }
 augroup END
 
-augroup EnableMinimalDiffHighlights
 augroup RestoreLastCursorLocation
         autocmd!
-        " only use 2-colors in diff-view
-        autocmd ColorScheme * call ReplaceDiffHighlightsWithBlueAndRedOnly()
         autocmd BufReadPost * {
                 JumpToTheLastKnownCursorLocation()
         }
@@ -209,6 +206,7 @@ augroup EnableUnderlineOnCursorLine
         autocmd!
         " only use underline for cursorline
         autocmd ColorScheme * call ReplaceCursorLineHighlight()
+                ReplaceDiffHighlightsWithBlueAndRedOnly()
 augroup END
 
 augroup SyncTerminalColorsWithOutside
