@@ -202,11 +202,9 @@ augroup RestoreLastCursorLocation
         }
 augroup END
 
-augroup EnableUnderlineOnCursorLine
         autocmd!
-        " only use underline for cursorline
-        autocmd ColorScheme * call ReplaceCursorLineHighlight()
                 ReplaceDiffHighlightsWithBlueAndRedOnly()
+                ReplaceCursorLineHighlightWithUnderline()
 augroup END
 
 augroup SyncTerminalColorsWithOutside
