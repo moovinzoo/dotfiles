@@ -247,11 +247,6 @@ g:tagbar_sort = 0
 
 # LSP (https://github.com/yegappan/lsp)
 packadd lsp
-" Options
-call LspOptionsSet(#{
-                        \ showDiagWithVirtualText: v:true,
-                        \ diagVirtualTextAlign: 'after',
-                        \ })
 var baseDir = '/home/djlee/.vim/server/'
 g:LspAddServer([
         {
@@ -267,3 +262,8 @@ g:LspAddServer([
                 args: [],
         },
 ])
+g:LspOptionsSet({
+        showDiagWithVirtualText: true,
+        diagVirtualTextAlign: 'after',
+})
+
