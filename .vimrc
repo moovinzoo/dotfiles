@@ -247,23 +247,23 @@ g:tagbar_sort = 0
 
 # LSP (https://github.com/yegappan/lsp)
 packadd lsp
-" Servers
-" " Lua (https://github.com/luals/lua-language-server)
-call LspAddServer([#{
-                        \ name: 'lua-language-server',
-                        \ filetype: ['lua'],
-                        \ path: '/home/djlee/.vim/server/lua-language-server/lua-language-server',
-                        \ args: []
-                        \  }])
-" " Java (https://github.com/eclipse-jdtls/eclipse.jdt.ls?tab=readme-ov-file)
-call LspAddServer([#{
-                        \ name: 'jdtls',
-                        \ filetype: ['java'],
-                        \ path: '/home/djlee/.vim/server/jdtls/jdtls',
-                        \ args: []
-                        \  }])
 " Options
 call LspOptionsSet(#{
                         \ showDiagWithVirtualText: v:true,
                         \ diagVirtualTextAlign: 'after',
                         \ })
+var baseDir = '/home/djlee/.vim/server/'
+g:LspAddServer([
+        {
+                name: 'lua-language-server',
+                filetype: 'lua',
+                path: baseDir .. 'lua-language-server/lua-language-server',
+                args: [],
+        },
+        {
+                name: 'jdtls',
+                filetype: 'java',
+                path: baseDir .. '/jdtls/jdtls',
+                args: [],
+        },
+])
