@@ -44,48 +44,30 @@ set autoread
 set ffs=unix,dos,mac
 
 
-" ---------------------------------------------------------------------------
-" [text editing]
-"
-" tab size
-" - for indenting lines; cindent, shiftwidth(>>)
-" - for pressing <Tab>; expandtab, smarttab, softtabstop
-" - for the visual length of a tab character(\t),
-"   whether it's from pressing the Tab key or not; tabstop
-set tabstop=16
-set softtabstop=8
-set shiftwidth=8
-set expandtab
+# ----------------------------------------------------------------------------
+# Text editing
+# ----------------------------------------------------------------------------
+# tab-size
+set tabstop=16                  # visual length of \t nomatter from tab or not
+set shiftwidth=8                # for indenting lines(>>) w/ cindent
+set softtabstop=8               # for pressing <Tab>
+set expandtab                   # 󱞩 cont'd, not going to use tab
 
-" C-style indent
-set cindent
+# improve-search
+set ignorecase                  # search behavior
+set smartcase                   # 󱞩 cont'd
+set hlsearch                    # 󱞩 cont'd
+set incsearch                   # 󱞩 cont'd
 
-" mark tabs and trailing spaces
+set cindent                     # C-style indent
 set list
-set listchars=tab:>-,trail:-
-
-" keep 3 lines below/above cursor when scrolling
-set scrolloff=5
-
-" support modelines (support exceptional tab size on file with :vim comment)
+set listchars=tab:>-,trail:-    # mark tabs and trailing spaces
 set modeline
-set modelines=5
-
-" keep 200 lines of command line history
-set history=200
-
-" backspace behavior
-set backspace=eol,start,indent
+set modelines=5                 # support modelines
+set scrolloff=5                 # keep lines below/above cursor when scrolling
+set backspace=eol,start,indent  # backspace behavior
 set whichwrap+=<,>,h,l
-
-" search behavior
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-
-" regular expressions
-set magic
+set magic                       # regular expressions
 
 
 " ---------------------------------------------------------------------------
