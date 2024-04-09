@@ -176,10 +176,6 @@ def HandyCommit()
         endif
 enddef
 
-" ---------------------------------------------------------------------------
-" [augroups]
-" compiled with the +eval feature, revert with ':autocmd! sth' 
-"
 augroup AlwaysJumpToTheLastKnownCursorPosition
         autocmd!
         " When editing a file, always jump to the last known cursor
@@ -198,6 +194,9 @@ augroup AlwaysJumpToTheLastKnownCursorPosition
                                 \ | endif
 augroup END
 
+# ----------------------------------------------------------------------------
+# Autocmds
+# ----------------------------------------------------------------------------
 augroup SmoothScrollTillEndOfDocument
         autocmd!
         " built-in Smooth-scroll w/ <C-e>, <C-y> till the end line
