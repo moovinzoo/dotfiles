@@ -52,14 +52,22 @@ set whichwrap+=<,>,h,l
 set magic                       # regular expressions
 
 
-" ---------------------------------------------------------------------------
-" [accessibility]
-"
-" share system clipboard, powered by vim-wayland-clipboard
-set clipboard=unnamedplus
+# ----------------------------------------------------------------------------
+# Accessibility
+# ----------------------------------------------------------------------------
+set noequalalways               # do not equalize the size of the buffers
+set wildmenu                    # support wildcard-matching
+set showcmd                     # display incomplete commands
+set lazyredraw                  # not to redraw during execution of macros
+set noerrorbells                # no sound/blink on errors
+set novisualbell                # 󱞩 cont'd
+set showmatch                   # visual: show matching brackets
+set mat=5                       # 󱞩 cont'd
+set history=300                 # keep command line history
+set clipboard=unnamedplus       # share system clipboard
+set keywordprg=:LspHover        # give priority to LspHover for K
+runtime! ftplugin/man.vim       # display man pages in a Vim buffer
 
-" display man pages in a Vim buffer
-runtime! ftplugin/man.vim
 
 # ----------------------------------------------------------------------------
 # Files, backups, undos
