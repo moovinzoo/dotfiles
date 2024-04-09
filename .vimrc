@@ -118,15 +118,6 @@ cnoremap <C-y> <C-r>0
 tnoremap <Esc> <C-\><C-n>
 
 
-" Hard-copy kitty-term's current theme(adwaita)
-function! RestoreAnsiColorsThatCurrentTermUses() abort
-        let g:terminal_ansi_colors = [
-                                \ '#000000', '#ed333b', '#57e389', '#ff7800',
-                                \ '#62a0ea', '#9141ac', '#5bc8af', '#deddda',
-                                \ '#9a9996', '#f66151', '#8ff0a4', '#ffa348',
-                                \ '#99c1f1', '#dc8add', '#93ddc2', '#f6f5f4',
-                                \]
-endfunction
 
 function! HandyCommit() abort
         let message = input("Commit) ")
@@ -164,6 +155,15 @@ def RemoveSignColumnHighlight()
 enddef
 
                 " Show feedback in the command line
+def RestoreAnsiColorsThatCurrentTermUses()
+        g:terminal_ansi_colors = [
+                '#000000', '#ed333b', '#57e389', '#ff7800',
+                '#62a0ea', '#9141ac', '#5bc8af', '#deddda',
+                '#9a9996', '#f66151', '#8ff0a4', '#ffa348',
+                '#99c1f1', '#dc8add', '#93ddc2', '#f6f5f4',
+        ]
+enddef
+
                 echo output
         else
                 echoerr "Error: Commit message cannot be empty"
