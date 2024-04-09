@@ -7,12 +7,18 @@
 
 ## Editor(Vim, main)
 - highly recommend version 9+, rc written in vim9script
-    - on purpose of escape-free config on LSP
+    - on purpose of escape-free feature especially configuring on LSP
     - 9+ provide core features including virtual text
 - use builtin package manager, w/o plugin managers like vim-plug
 - use [yegapann/lsp](https://github.com/yegappan/lsp) as a client of LSP
     - light weight
     - one-liner server registration
+
+### Caveats
+- runtime-file(ftplugin/vim.vim) concludes rcfile's filetype, whether it is
+ vim or vim9. The commenting plugin tpope/vim-commentary decides the comment-
+ character to be " or # respectively. So vim9script phrase should be placed
+ on the top of the rcfile.
 
 ## Editor(Neovim, sub)
 - submodule, fork of [kickstart](https://github.com/nvim-lua/kickstart.nvim)
