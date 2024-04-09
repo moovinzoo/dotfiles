@@ -26,3 +26,6 @@
 [submodule ".vim/pack/protocols/opt/lsp"]
 	path = .vim/pack/protocols/opt/lsp
 	url = https://github.com/yegappan/lsp
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:moovinzoo/kickstart.nvim.git
