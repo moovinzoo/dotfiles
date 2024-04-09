@@ -80,41 +80,42 @@ if has('persistent_undo')       # keep undo changes after closing
 endif
 
 
-" ---------------------------------------------------------------------------
-" [mappings]
-"
-" leader key
-let mapleader=" "
+## ----------------------------------------------------------------------------
+## Mapping
+## ----------------------------------------------------------------------------
+g:mapleader = " "
 
-" [mapping: normal mode]
-nnoremap vv viw
 nnoremap H ^
 nnoremap L g_
+nnoremap vv viw
 nnoremap Q :q<CR>
-nnoremap <leader>q :q!<CR>
-nnoremap <leader>Q :qa<CR>
-nnoremap <Leader>; :windo if &diff \| diffoff \| else \| diffthis \| endif<CR>
-nnoremap <leader>c :call HandyCommit()<CR>
+nnoremap <Esc> :noh<CR>
+# quick window-switching
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+# prevent frequent mis-use
+nnoremap <S-j> <Nop>
+nnoremap <silent> <leader>p :TagbarToggle<CR>
+nnoremap <silent> <leader>hc <ScriptCmd>HandyCommit()<CR>
 
-" [mapping: insert mode]
-" restore shell keymaps in insert mode
+# prevent diagnostic interruption
+inoremap <C-c> <C-[>
+# restore shell-style keymaps
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
-inoremap <C-y> <C-r>0
-inoremap <C-c> <C-[>
-" insert current datetime
-" inoremap <C-'> <C-R>=InsertDateTime()<CR>
+inoremap <C-y> <C-r>
 
-" [mapping: visual mode]
 vnoremap H ^
 vnoremap L g_
 
-" [mapping: command mode]
-" restore shell keymaps in command mode
+# restore shell-style keymaps
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-y> <C-r>0
 
+tnoremap <Esc> <C-\><C-n>
 
 " ---------------------------------------------------------------------------
 " [functions]
