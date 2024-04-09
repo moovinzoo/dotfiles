@@ -228,13 +228,6 @@ colorscheme pablo
 
 
 
-" [command: DiffMode]
-" Convenient command to see the difference between the two buffers.
-" Revert with: ":delcommand DiffMode".
-" Close with: ":q".
-if !exists(":DiffMode")
-        command! DiffMode windo if &diff | diffoff | else | diffthis | endif
-endif
 
 
 " ---------------------------------------------------------------------------
