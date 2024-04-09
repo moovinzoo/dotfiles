@@ -26,24 +26,6 @@ set laststatus=2                # always show statusline even w/ 1 buffer
 set signcolumn=yes              # always show signcolumn even w/o git changes
 
 
-" ---------------------------------------------------------------------------
-" [files, backups, and undo]
-"
-" do not create backup files
-set nobackup
-
-" keep undo changes after closing
-if has('persistent_undo')
-        set undofile
-endif
-
-" set to read-only if the file is modified from the outside
-set autoread
-
-" filetype order preference
-set ffs=unix,dos,mac
-
-
 # ----------------------------------------------------------------------------
 # Text editing
 # ----------------------------------------------------------------------------
@@ -78,6 +60,16 @@ set clipboard=unnamedplus
 
 " display man pages in a Vim buffer
 runtime! ftplugin/man.vim
+
+# ----------------------------------------------------------------------------
+# Files, backups, undos
+# ----------------------------------------------------------------------------
+set nobackup                    # do not create backup files
+set autoread                    # read-only if the file is modified outside
+set ffs=unix,dos,mac            # filetype preference order
+if has('persistent_undo')       # keep undo changes after closing
+        set undofile
+endif
 
 
 " ---------------------------------------------------------------------------
