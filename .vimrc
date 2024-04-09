@@ -266,7 +266,3 @@ g:LspOptionsSet({
         showDiagWithVirtualText: true,
         diagVirtualTextAlign: 'after',
 })
-
-# TODO: bootstrap @LSP/inlay-hint features
-# TODO: setup @LSP/initializationOptions for jdtls to meet perfectly
-# TODO: consider to use plugin/CtrlP
