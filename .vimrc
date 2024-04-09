@@ -222,17 +222,16 @@ augroup RegisterUserDefineCommands
 augroup END
 
 
-
-
-
-
-
-" ---------------------------------------------------------------------------
-" [plugins]
-"
-" [plugin: TermDebug(built-in)]
-" enable builtin package
+# ----------------------------------------------------------------------------
+# Plugins
+# ----------------------------------------------------------------------------
+# [TermDebug(built-in]
 packadd! termdebug
+
+
+
+
+
 "
 " [plugin: Netrw(built-in)]
 " tree style listing
