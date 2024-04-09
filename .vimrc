@@ -235,14 +235,11 @@ g:netrw_winsize = 25                    # specify initial size to 25%
 
 # Fugitive
 
+# GitGutter
+set updatetime=100                      # diffmarkers (default: 4000)
+# TODO: how to focus on popup window?
+g:gitgutter_preview_win_floating = 1
 
-
-" [plugin: GitGutter]
-" diffmarkers should appear automatically after a short delay (default:4000)
-set updatetime=100
-" always show sign column without redraw (default: auto)
-set signcolumn=yes
-let g:gitgutter_preview_win_floating = 1
 
 " [plugin: Tagbar]
 " limit width to 30
