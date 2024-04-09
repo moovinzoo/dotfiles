@@ -214,7 +214,11 @@ augroup END
 colorscheme 256_noir
 #set background=dark
 
+augroup RegisterUserDefineCommands
         autocmd!
+        autocmd BufReadPost * {
+                DefineDiffOrigCommand()
+        }
 augroup END
 
 
