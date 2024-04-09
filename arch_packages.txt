@@ -14,6 +14,7 @@ brillo
 btop
 clang
 cmake
+cpanminus
 ctags
 cups
 cups-pdf
@@ -32,6 +33,7 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-hangul
 fcitx5-qt
+fd
 firefox
 flatpak
 foot
@@ -59,8 +61,8 @@ intel-ipu6-dkms-git
 intel-ucode
 intltool
 iwd
+jdk17-openjdk
 jq
-jre17-openjdk-headless
 kitty
 lazygit
 less
@@ -81,6 +83,7 @@ mpv
 mupdf
 nano
 neofetch
+neovim
 networkmanager
 noto-fonts-emoji
 nvm
@@ -92,6 +95,7 @@ pdfjs
 pipewire-alsa
 polkit-kde-agent
 python-pillow
+python-pynvim
 python2
 qt5-wayland
 qt5ct
@@ -119,6 +123,7 @@ ttf-iosevkaterm-nerd
 ttf-jetbrains-mono-nerd
 ttf-lekton-nerd
 ttf-ubuntu-mono-nerd
+unzip
 usbutils
 vi
 via-bin
@@ -139,7 +144,6 @@ xorg-server
 xorg-xev
 xorg-xhost
 xournalpp
-xsel
 z
 zathura
 zathura-pdf-mupdf
