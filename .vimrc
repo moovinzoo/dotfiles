@@ -206,12 +206,10 @@ augroup END
                 ReplaceDiffHighlightsWithBlueAndRedOnly()
                 ReplaceCursorLineHighlightWithUnderline()
                 RemoveSignColumnHighlight()
+                RestoreAnsiColorsThatCurrentTermUses()
 augroup END
 
-augroup SyncTerminalColorsWithOutside
         autocmd!
-        " restore 16 colors that is ruined by using termguicolors option
-        autocmd ColorScheme * call RestoreAnsiColorsThatCurrentTermUses()
 augroup END
 
 
