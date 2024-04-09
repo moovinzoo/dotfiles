@@ -1,16 +1,16 @@
-" Author: moovinzoo@gmail.com
-" Last Modified: (Apr 09 2024 - 01:37)
-" Maintainer: The Vim Project <https://github.com/vim/vim>
-" Reference: Vimrc checklist <https://www.reddit.com/r/vim/wiki/vimrctips/>
-" Shell: bash
-" Terminal: kitty
-" Session: wayland
-" LSP Client: @yegappan/lsp
-" LSP Server Installer: Neovim/Mason
-
 vim9script
+# Author: moovinzoo@gmail.com
+# Last Modified: (Apr 09 2024 - 01:37)
+# Maintainer: The Vim Project <https://github.com/vim/vim>
+# Reference: Vimrc checklist <https://www.reddit.com/r/vim/wiki/vimrctips/>
+# Shell: bash
+# Terminal: kitty
+# Session: wayland
+# LSP Client: @yegappan/lsp
+# LSP Server Installer: Neovim/Mason
 filetype plugin indent on
 set encoding=utf8
+
 
 # ----------------------------------------------------------------------------
 # Appearance
