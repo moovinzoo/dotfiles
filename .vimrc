@@ -205,6 +205,7 @@ augroup END
         autocmd!
                 ReplaceDiffHighlightsWithBlueAndRedOnly()
                 ReplaceCursorLineHighlightWithUnderline()
+                RemoveSignColumnHighlight()
 augroup END
 
 augroup SyncTerminalColorsWithOutside
@@ -213,10 +214,6 @@ augroup SyncTerminalColorsWithOutside
         autocmd ColorScheme * call RestoreAnsiColorsThatCurrentTermUses()
 augroup END
 
-augroup ReplaceSignColumnHighlightForPabloColorScheme
-        autocmd!
-        autocmd ColorScheme pablo call DimDownSignColumnHighlight()
-augroup END
 
 " use built-in colorscheme, weirdly placed here to be below augroup registered
 colorscheme pablo
