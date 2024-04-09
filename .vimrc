@@ -118,11 +118,6 @@ cnoremap <C-y> <C-r>0
 tnoremap <Esc> <C-\><C-n>
 
 
-" Dim down sign-column
-function! DimDownSignColumnHighlight() abort
-        highlight SignColumn guibg=#111111
-endfunction
-
 " Hard-copy kitty-term's current theme(adwaita)
 function! RestoreAnsiColorsThatCurrentTermUses() abort
         let g:terminal_ansi_colors = [
@@ -163,6 +158,10 @@ enddef
                 " Execute the git commit command
                 let cmd = 'git commit -m "' . message . '"'
                 let output = system(cmd)
+def RemoveSignColumnHighlight()
+        highlight clear SignColumn
+        highlight! link SignColumn Normal
+enddef
 
                 " Show feedback in the command line
                 echo output
