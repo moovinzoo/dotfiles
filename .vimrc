@@ -176,23 +176,6 @@ def HandyCommit()
         endif
 enddef
 
-augroup AlwaysJumpToTheLastKnownCursorPosition
-        autocmd!
-        " When editing a file, always jump to the last known cursor
-        " position. Don't do it when the position is invalid, when
-        " inside an event handler (happens when dropping a file on
-        " gvim), for a commit or rebase message (likely a different
-        " one than last time), and when using xxd(1) to filter
-        " and edit binary files (it transforms input files back and
-        " forth, causing them to have dual nature, so to speak)
-        autocmd BufReadPost *
-                                \ let line = line("'\"")
-                                \ | if line >= 1 && line <= line("$")
-                                \      && &filetype !~# 'commit'
-                                \      && index(['xxd', 'gitrebase'], &filetype) == -1
-                                \ |   execute "normal! g`\""
-                                \ | endif
-augroup END
 
 # ----------------------------------------------------------------------------
 # Autocmds
@@ -208,9 +191,13 @@ augroup SmoothScrollTillEndOfDocument
 augroup END
 
 augroup EnableMinimalDiffHighlights
+augroup RestoreLastCursorLocation
         autocmd!
         " only use 2-colors in diff-view
         autocmd ColorScheme * call ReplaceDiffHighlightsWithBlueAndRedOnly()
+        autocmd BufReadPost * {
+                JumpToTheLastKnownCursorLocation()
+        }
 augroup END
 
 augroup EnableUnderlineOnCursorLine
