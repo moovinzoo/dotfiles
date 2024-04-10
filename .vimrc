@@ -149,6 +149,7 @@ def RemoveSignColumnHighlight()
         highlight! link SignColumn Normal
 enddef
 
+// NOTE: currently hard-copy colors to optimize startup
 def RestoreAnsiColorsThatCurrentTermUses()
         # g:terminal_ansi_colors = [
         #         '#000000', '#ed333b', '#57e389', '#ff7800',
