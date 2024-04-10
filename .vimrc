@@ -149,20 +149,14 @@ def RemoveSignColumnHighlight()
         highlight! link SignColumn Normal
 enddef
 
-// NOTE: currently hard-copy colors to optimize startup
+# NOTE: currently hard-copy colors to optimize startup
 def RestoreAnsiColorsThatCurrentTermUses()
-        # g:terminal_ansi_colors = [
-        #         '#000000', '#ed333b', '#57e389', '#ff7800',
-        #         '#62a0ea', '#9141ac', '#5bc8af', '#deddda',
-        #         '#9a9996', '#f66151', '#8ff0a4', '#ffa348',
-        #         '#99c1f1', '#dc8add', '#93ddc2', '#f6f5f4',
-        # ] # Adwaita
         g:terminal_ansi_colors = [
-                '#181818', '#960042', '#FF0000', '#FF5D05',
-                '#FF2044', '#FFEDCF', '#6F0027', '#FFDAF1',
-                '#333333', '#870300', '#690000', '#6F2700',
-                '#333333', '#FFFFB5', '#F50056', '#FFE6DA',
-        ] # Hachiko
+                '#000000', '#ed333b', '#57e389', '#ff7800',
+                '#62a0ea', '#9141ac', '#5bc8af', '#deddda',
+                '#9a9996', '#f66151', '#8ff0a4', '#ffa348',
+                '#99c1f1', '#dc8add', '#93ddc2', '#f6f5f4',
+        ] # Adwaita
 enddef
 
 def JumpToTheLastKnownCursorLocation()
