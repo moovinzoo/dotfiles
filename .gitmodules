@@ -26,3 +26,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:moovinzoo/kickstart.nvim.git
+[submodule ".bash"]
+	path = .bash
+	url = git@github.com:moovinzoo/bash-it
