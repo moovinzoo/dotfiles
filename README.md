@@ -1,7 +1,7 @@
 # dotfiles
 
 ## Shell(Bash)
-- submodule, fork of [bash-it](https://github.com/Bash-it/bash-it)
+- *submodule*, fork of [bash-it](https://github.com/Bash-it/bash-it)
 
 ---
 
@@ -13,6 +13,16 @@
 - use [yegapann/lsp](https://github.com/yegappan/lsp) as a client of LSP
     - light weight
     - one-liner server registration
+- packages:
+    - jasonccox/vim-wayland-clipboard
+    - tpope/vim-fugitive.git
+    - airblade/vim-gitgutter
+    - majutsushi/tagbar.git
+    - rhysd/vim-healthcheck
+    - tpope/vim-commentary
+    - yegappan/lsp
+
+---
 
 ### Caveats
 - runtime-file(ftplugin/vim.vim) concludes rcfile's filetype, whether it is
@@ -21,7 +31,7 @@
  on the top of the rcfile.
 
 ## Editor(Neovim, sub)
-- submodule, fork of [kickstart](https://github.com/nvim-lua/kickstart.nvim)
+- *submodule*, fork of [kickstart](https://github.com/nvim-lua/kickstart.nvim)
 - For now, passive use as a plugin manager of LSP servers
     - not a fan of feature-fluent editor
 
