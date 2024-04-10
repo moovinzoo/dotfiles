@@ -116,6 +116,11 @@ cnoremap <C-e> <End>
 cnoremap <C-y> <C-r>0
 
 tnoremap <Esc> <C-\><C-n>
+# quick window-switching
+tnoremap <C-h> <C-w><C-h>
+tnoremap <C-j> <C-w><C-j>
+tnoremap <C-k> <C-w><C-k>
+#tnoremap <C-l> <C-w><C-l>              # disabled, to preserve <clear>
 
 
 # ----------------------------------------------------------------------------
