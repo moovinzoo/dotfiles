@@ -271,8 +271,6 @@ augroup MinimalizeHighlights
                 RestoreAnsiColorsThatCurrentTermUses()
         }
 augroup END
-colorscheme 256_noir
-#set background=dark
 
 augroup RegisterUserDefineCommands
         autocmd!
@@ -281,6 +279,8 @@ augroup RegisterUserDefineCommands
         }
 augroup END
 
+colorscheme quiet
+set background=light
 
 # ----------------------------------------------------------------------------
 # Plugins
