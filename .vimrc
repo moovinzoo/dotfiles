@@ -141,7 +141,7 @@ enddef
 
 def ReplaceCursorLineHighlightWithUnderline()
         highlight clear CursorLine
-        highlight CursorLine cterm=underline gui=underline
+        highlight CursorLine cterm=underdouble gui=underdouble guisp=Black
 enddef
 
 def RemoveSignColumnHighlight()
