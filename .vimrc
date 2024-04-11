@@ -229,14 +229,8 @@ augroup RestoreLastCursorLocation
         }
 augroup END
 
-augroup MinimalizeHighlights
 colorscheme wildcharm
         autocmd!
-        autocmd ColorScheme * {
-                ReplaceDiffHighlightsWithBlueAndRedOnly()
-                ReplaceCursorLineHighlightWithUnderline()
-                RemoveSignColumnHighlight()
-                RestoreAnsiColorsThatCurrentTermUses()
         }
 augroup END
 
