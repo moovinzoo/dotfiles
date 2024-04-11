@@ -247,6 +247,11 @@ augroup RegisterUserDefineCommands
         }
 augroup END
 
+augroup AlwaysCdToBufferDir
+        autocmd!
+        autocmd BufReadPost * cd %:p:h
+augroup END
+
 
 # ----------------------------------------------------------------------------
 # Plugins
