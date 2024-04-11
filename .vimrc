@@ -179,11 +179,6 @@ endif
 # ----------------------------------------------------------------------------
 # Functions
 # ----------------------------------------------------------------------------
-def ReplaceCursorLineHighlightWithUnderline()
-        highlight clear CursorLine
-        highlight CursorLine cterm=underdouble gui=underdouble guisp=Black
-enddef
-
 def RemoveSignColumnHighlight()
         highlight clear SignColumn
         highlight! link SignColumn Normal
