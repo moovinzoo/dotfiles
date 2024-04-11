@@ -230,6 +230,7 @@ augroup RestoreLastCursorLocation
 augroup END
 
 augroup MinimalizeHighlights
+colorscheme wildcharm
         autocmd!
         autocmd ColorScheme * {
                 ReplaceDiffHighlightsWithBlueAndRedOnly()
@@ -246,8 +247,6 @@ augroup RegisterUserDefineCommands
         }
 augroup END
 
-colorscheme quiet
-set background=light
 
 # ----------------------------------------------------------------------------
 # Plugins
