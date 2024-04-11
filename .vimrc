@@ -230,7 +230,11 @@ augroup RestoreLastCursorLocation
 augroup END
 
 colorscheme wildcharm
+
+augroup RegisterUserDefineCommands
         autocmd!
+        autocmd BufReadPost * {
+                DefineDiffOrigCommand()
         }
 augroup END
 
