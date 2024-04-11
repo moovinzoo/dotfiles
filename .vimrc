@@ -170,6 +170,7 @@ enddef
 
 # User-defines
 def HandyCommit()
+        cd %:h
         var message = input("Commit) ")
         redraw!
         if strlen(message) > 0
