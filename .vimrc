@@ -179,16 +179,6 @@ endif
 # ----------------------------------------------------------------------------
 # Functions
 # ----------------------------------------------------------------------------
-# NOTE: currently hard-copy colors to optimize startup
-def RestoreAnsiColorsThatCurrentTermUses()
-        g:terminal_ansi_colors = [
-                '#000000', '#ed333b', '#57e389', '#ff7800',
-                '#62a0ea', '#9141ac', '#5bc8af', '#deddda',
-                '#9a9996', '#f66151', '#8ff0a4', '#ffa348',
-                '#99c1f1', '#dc8add', '#93ddc2', '#f6f5f4',
-        ] # Adwaita
-enddef
-
 def JumpToTheLastKnownCursorLocation()
         var line = line("'\"")
         if line >= 1 && line <= line("$")
