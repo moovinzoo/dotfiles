@@ -119,7 +119,7 @@ tnoremap <Esc> <C-\><C-n>
 tnoremap <C-h> <C-w><C-h>
 tnoremap <C-j> <C-w><C-j>
 tnoremap <C-k> <C-w><C-k>
-#tnoremap <C-l> <C-w><C-l>              # disabled, to preserve <clear>
+#tnoremap <C-l> <C-w><C-l>              # disable to keep <clear> in term
 
 
 # ----------------------------------------------------------------------------
