@@ -179,11 +179,6 @@ endif
 # ----------------------------------------------------------------------------
 # Functions
 # ----------------------------------------------------------------------------
-def RemoveSignColumnHighlight()
-        highlight clear SignColumn
-        highlight! link SignColumn Normal
-enddef
-
 # NOTE: currently hard-copy colors to optimize startup
 def RestoreAnsiColorsThatCurrentTermUses()
         g:terminal_ansi_colors = [
