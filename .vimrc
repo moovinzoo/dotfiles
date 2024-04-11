@@ -79,6 +79,48 @@ if has('persistent_undo')       # keep undo changes after closing
         set undofile
 endif
 
+# ----------------------------------------------------------------------------
+# Mapping
+# ----------------------------------------------------------------------------
+g:mapleader = " "
+
+nnoremap H ^
+nnoremap L g_
+nnoremap vv viw
+nnoremap Q :q<CR>
+nnoremap <Esc> :noh<CR>
+# quick window-switching
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+# prevent frequent mis-use
+nnoremap <S-j> <Nop>
+nnoremap <silent> <leader>p :TagbarToggle<CR>
+nnoremap <silent> <leader>hc <ScriptCmd>HandyCommit()<CR>
+
+# prevent diagnostic interruption
+inoremap <C-c> <C-[>
+# restore shell-style keymaps
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-y> <C-r>
+
+vnoremap H ^
+vnoremap L g_
+
+# restore shell-style keymaps
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-y> <C-r>0
+
+tnoremap <Esc> <C-\><C-n>
+# quick window-switching
+tnoremap <C-h> <C-w><C-h>
+tnoremap <C-j> <C-w><C-j>
+tnoremap <C-k> <C-w><C-k>
+#tnoremap <C-l> <C-w><C-l>              # disabled, to preserve <clear>
+
 
 # ----------------------------------------------------------------------------
 # Kitty support
@@ -132,48 +174,6 @@ if $TERM == 'xterm-kitty'
         # kitty that do not support background color erase.
         &t_ut = ''
 endif
-
-# ----------------------------------------------------------------------------
-# Mapping
-# ----------------------------------------------------------------------------
-g:mapleader = " "
-
-nnoremap H ^
-nnoremap L g_
-nnoremap vv viw
-nnoremap Q :q<CR>
-nnoremap <Esc> :noh<CR>
-# quick window-switching
-nnoremap <C-h> <C-w><C-h>
-nnoremap <C-j> <C-w><C-j>
-nnoremap <C-k> <C-w><C-k>
-nnoremap <C-l> <C-w><C-l>
-# prevent frequent mis-use
-nnoremap <S-j> <Nop>
-nnoremap <silent> <leader>p :TagbarToggle<CR>
-nnoremap <silent> <leader>hc <ScriptCmd>HandyCommit()<CR>
-
-# prevent diagnostic interruption
-inoremap <C-c> <C-[>
-# restore shell-style keymaps
-inoremap <C-a> <Home>
-inoremap <C-e> <End>
-inoremap <C-y> <C-r>
-
-vnoremap H ^
-vnoremap L g_
-
-# restore shell-style keymaps
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
-cnoremap <C-y> <C-r>0
-
-tnoremap <Esc> <C-\><C-n>
-# quick window-switching
-tnoremap <C-h> <C-w><C-h>
-tnoremap <C-j> <C-w><C-j>
-tnoremap <C-k> <C-w><C-k>
-#tnoremap <C-l> <C-w><C-l>              # disabled, to preserve <clear>
 
 
 # ----------------------------------------------------------------------------
