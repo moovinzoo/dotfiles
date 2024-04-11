@@ -278,6 +278,7 @@ g:tagbar_sort = 0
 
 # LSP (https://github.com/yegappan/lsp)
 packadd lsp
+setlocal formatexpr=lsp#lsp#FormatExpr()        # improve gq behavior
 var baseDir = '/home/djlee/.vim/server/'
 g:LspAddServer([
         {
