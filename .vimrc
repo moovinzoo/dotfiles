@@ -65,7 +65,7 @@ set showmatch                   # visual: show matching brackets
 set mat=5                       # 󱞩 cont'd
 set history=300                 # keep command line history
 set clipboard=unnamedplus       # share system clipboard
-set keywordprg=:LspHover        # give priority to LspHover for K
+set keywordprg=:LspHover        # improve K behavior(priority)
 runtime! ftplugin/man.vim       # display man pages in a Vim buffer
 
 
@@ -179,19 +179,6 @@ endif
 # ----------------------------------------------------------------------------
 # Functions
 # ----------------------------------------------------------------------------
-def ReplaceDiffHighlightsWithBlueAndRedOnly()
-        # leave only sytnax-highlights on diffs
-        highlight clear DiffAdd
-        highlight clear DiffDelete
-        highlight clear DiffChange
-        highlight clear DiffText
-        # and use blue, red backgrounds behind syntax-highlighted text
-        highlight DiffAdd    guibg=MidnightBlue
-        highlight DiffDelete guibg=MidnightBlue
-        highlight DiffChange guibg=MidnightBlue
-        highlight DiffText   guibg=DarkRed
-enddef
-
 def ReplaceCursorLineHighlightWithUnderline()
         highlight clear CursorLine
         highlight CursorLine cterm=underdouble gui=underdouble guisp=Black
