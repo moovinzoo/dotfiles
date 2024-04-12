@@ -249,20 +249,20 @@ augroup END
 packadd! termdebug
 
 # Netrw(built-in)]
-g:netrw_liststyle = 3                   # tree-style listing
-g:netrw_banner = 0                      # suppress help
-g:netrw_winsize = 25                    # specify initial size to 25%
+g:netrw_liststyle = 3                           # tree-style listing
+g:netrw_banner = 0                              # suppress help
+g:netrw_winsize = 25                            # specify initial size to 25%
 
 # Fugitive
 
 # GitGutter
-set updatetime=100                      # diffmarkers (default: 4000)
+set updatetime=100                              # diffmarkers (default: 4000)
 # TODO: how to focus on popup window?
 g:gitgutter_preview_win_floating = 1
 
 # Tagbar
-g:tagbar_width = 30                     # limit width to 30
-g:tagbar_compact = 2                    # suppress help
+g:tagbar_width = 30                             # limit width to 30
+g:tagbar_compact = 2                            # suppress help
 g:tagbar_sort = 0
 
 # LSP (https://github.com/yegappan/lsp)
