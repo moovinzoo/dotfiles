@@ -24,7 +24,7 @@ set textwidth=78
 set colorcolumn=+1              # enable colorcolumn as a border of textwidth
 set laststatus=2                # always show statusline even w/ 1 buffer
 set signcolumn=yes              # always show signcolumn even w/o git changes
-colorscheme envy
+colorscheme envy2
 
 
 # ----------------------------------------------------------------------------
