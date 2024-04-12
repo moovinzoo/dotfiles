@@ -230,7 +230,7 @@ augroup RestoreLastCursorLocation
         }
 augroup END
 
-colorscheme wildcharm
+colorscheme envy
 
 augroup RegisterUserDefineCommands
         autocmd!
