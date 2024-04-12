@@ -4,6 +4,7 @@ xkb_symbols "basic" {
         include "us"
         include "cust(swap_backslash_backspace)"
         include "cust(sub_tilde_escape)"
+        include "cust(sub_delete_tilde)"
         //include "cust(sub_eject_tilde)"
 };
 
@@ -23,10 +24,10 @@ xkb_symbols "sub_tilde_escape" {
 //         key <INS> { [ backslash, bar ] };
 // };
 // 
-// partial modifier_keys
-// xkb_symbols "sub_delete_tilde" {
-//         key <DELE> { [ grave, asciitilde ] };
-// };
+partial modifier_keys
+xkb_symbols "sub_delete_tilde" {
+        key <DELE> { [ grave, asciitilde ] };
+};
 
 //partial alphanumeric_keys
 partial modifier_keys
