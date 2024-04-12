@@ -190,7 +190,6 @@ enddef
 
 # User-defines
 def HandyCommit()
-
         w
         cd %:h
         var message = input("Commit) ")
