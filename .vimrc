@@ -99,7 +99,6 @@ nnoremap <C-l> <C-w><C-l>
 # prevent frequent mis-use
 nnoremap <S-j> <Nop>
 nnoremap <silent> <leader>p :TagbarToggle<CR>
-nnoremap <silent> <leader>hc <ScriptCmd>HandyCommit()<CR>
 # impl CtrlP like func.
 nnoremap <C-p> :FZF<CR>
 
