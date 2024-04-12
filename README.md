@@ -55,4 +55,4 @@
 ## Todo
 - [x] bootstrap @LSP/inlay-hint features
 - [ ] setup @LSP/initializationOptions for jdtls to meet perfectly
-- [ ] consider to use plugin/CtrlP
+- [x] ~~consider to use plugin/CtrlP~~ DUPLICATED, FZF instead
