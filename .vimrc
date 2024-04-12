@@ -189,8 +189,7 @@ enddef
 
 # User-defines
 def HandyCommit()
-        w
-        cd %:h
+        cd %:h | w      # cd to buffer's dir and write changes before commit
         var message = input("Commit) ")
         redraw!
         if strlen(message) > 0
