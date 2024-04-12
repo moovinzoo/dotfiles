@@ -53,6 +53,6 @@
 ---
 
 ## Todo
-- [ ] bootstrap @LSP/inlay-hint features
+- [x] bootstrap @LSP/inlay-hint features
 - [ ] setup @LSP/initializationOptions for jdtls to meet perfectly
 - [ ] consider to use plugin/CtrlP
