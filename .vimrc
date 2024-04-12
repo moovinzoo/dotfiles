@@ -190,21 +190,6 @@ def JumpToTheLastKnownCursorLocation()
         endif
 enddef
 
-# User-defines
-def HandyCommit()
-        cd %:h | w      # cd to buffer's dir and write changes before commit
-        var message = input("Commit) ")
-        redraw!
-        if strlen(message) > 0
-                message = substitute(message, '"', '\\"', 'g')
-                var cmd = 'git commit -m "' .. message .. '"'
-                var output = system(cmd)
-                echo output
-        else
-                echoerr "Error: Commit message cannot be empty"
-        endif
-enddef
-
 def DefineDiffOrigCommand()
         execute 'command! DiffOrig vert new | set bt=nofile | r ++edit '
                 .. expand("%p") .. ' |: 0d | diffthis | wincmd p | diffthis'
@@ -236,11 +221,6 @@ augroup RegisterUserDefineCommands
         autocmd BufReadPost * {
                 DefineDiffOrigCommand()
         }
-augroup END
-
-augroup AlwaysCdToBufferDir
-        autocmd!
-        autocmd BufReadPost * cd %:p:h
 augroup END
 
 
