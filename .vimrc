@@ -209,6 +209,11 @@ augroup SmoothScrollTillEndOfDocument
         }
 augroup END
 
+augroup ExcludeQuickFixWindowWhenTraversingBuffers
+    autocmd!
+    autocmd FileType qf set nobuflisted
+augroup END
+
 augroup RestoreLastCursorLocation
         autocmd!
         autocmd BufReadPost * {
