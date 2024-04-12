@@ -284,9 +284,25 @@ g:LspAddServer([
                 filetype: 'java',
                 path: baseDir .. '/jdtls/jdtls',
                 args: [],
+                initializationOptions: {
+                                java: {
+                                        inlayHints: {
+                                                parameterNames: {
+                                                        enabled: 'all',
+                                                },
+                                        },
+                                },
+                        },
+                        features: {
+                                inlayHints: true,
+                        },
+                },
         },
 ])
+
 g:LspOptionsSet({
         showDiagWithVirtualText: true,
         diagVirtualTextAlign: 'after',
+        showInlayHints: true,
 })
+
