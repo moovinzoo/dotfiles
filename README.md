@@ -53,6 +53,8 @@
 ---
 
 ## Todo
-- [x] bootstrap @LSP/inlay-hint features
-- [ ] setup @LSP/initializationOptions for jdtls to meet perfectly
-- [x] ~~consider to use plugin/CtrlP~~ DUPLICATED, FZF instead
+- [ ] @LSP/opts
+    - [ ] initializationOptions for jdtls
+        - [x] ensure that JavaDoc preview is working in complete options
+    - [ ] workspaceConfig
+    - [ ] rootSearch
