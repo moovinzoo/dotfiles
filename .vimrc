@@ -238,13 +238,6 @@ augroup RegisterUserDefineCommands
         }
 augroup END
 
-augroup RegisterUserDefineCommands
-        autocmd!
-        autocmd BufReadPost * {
-                DefineDiffOrigCommand()
-        }
-augroup END
-
 augroup AlwaysCdToBufferDir
         autocmd!
         autocmd BufReadPost * cd %:p:h
