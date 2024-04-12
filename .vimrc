@@ -285,6 +285,7 @@ g:LspAddServer([
                 path: baseDir .. '/jdtls/jdtls',
                 args: [],
                 initializationOptions: {
+                        settings: {
                                 java: {
                                         inlayHints: {
                                                 parameterNames: {
