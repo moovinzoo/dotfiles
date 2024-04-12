@@ -104,7 +104,6 @@ inoremap <C-c> <C-[>
 # restore shell-style keymaps
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
-inoremap <C-y> <C-r>
 
 vnoremap H ^
 vnoremap L g_
