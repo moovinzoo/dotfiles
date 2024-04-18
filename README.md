@@ -53,8 +53,10 @@
 ---
 
 ## Todo
-- [ ] @LSP/opts
-    - [ ] initializationOptions for jdtls
-        - [x] ensure that JavaDoc preview is working in complete options
-    - [ ] workspaceConfig
-    - [ ] rootSearch
+- [ ] lsp-cfg-initializationOptions
+    - [x] ensure JavaDoc preview support for complete-options
+- [ ] lsp-cfg-workspaceConfig
+- [ ] lsp-cfg-rootSearch
+- [ ] lsp-cfg-omnicompl
+- [ ] lsp-cfg-features
+        
