@@ -1,0 +1,7 @@
+[".config/nvim"]
+type = "git-repo"
+url = "git@github-personal:moovinzoo/kickstart.nvim.git"
+refreshPeriod = "168h"
+
+[".config/nvim".clone]
+args = ["--branch", "wsl"]

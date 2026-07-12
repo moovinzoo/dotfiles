@@ -1,0 +1,41 @@
+# ~/.ssh/config 파일 수정
+#Host wirecode.lgcns.com
+#    HostName wirecode.lgcns.com
+#    Port 7974
+#    User git
+#    IdentityFile ~/.ssh/id_ed25519
+#    # 아래 두 줄을 추가해 보세요 (보안 협상 문제 해결)
+#    KexAlgorithms +diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+#    HostkeyAlgorithms +ssh-rsa
+
+Host wirecode.lgcns.com
+    HostName 52.78.40.120
+    Port 7974
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+    # 서버와의 호환성을 위해 아래 옵션 추가
+    KexAlgorithms +diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+    HostkeyAlgorithms +ssh-rsa,ssh-dss
+    PubkeyAcceptedAlgorithms +ssh-rsa
+
+# Host 43.201.103.117
+#     HostName 43.201.103.117
+#     User ubuntu
+#     IdentityFile ~/.ssh/LightsailDefaultKey-ap-northeast-2.pem
+
+Host wedding
+    HostName 260919.duckdns.org
+    User ubuntu
+    IdentityFile ~/.ssh/LightsailDefaultKey-ap-northeast-2.pem
+
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_lgcns_github
+    IdentitiesOnly yes
+
+Host github-personal
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_github_personal
+    IdentitiesOnly yes
