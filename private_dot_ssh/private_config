@@ -13,6 +13,13 @@ Host wirecode.lgcns.com
     Port 7974
     User git
     IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+
+Host wirecode-team
+    HostName wirecode.lgcns.com
+    Port 7974
+    User git
+    IdentityFile ~/.ssh/id_ed25519
     # 서버와의 호환성을 위해 아래 옵션 추가
     KexAlgorithms +diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
     HostkeyAlgorithms +ssh-rsa,ssh-dss
@@ -38,4 +45,10 @@ Host github-personal
     HostName github.com
     User git
     IdentityFile ~/.ssh/id_ed25519_github_personal
+    IdentitiesOnly yes
+
+Host adp-gitlab
+    HostName adp-gitlab.adp.genai-launch.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_adp_gitlab
     IdentitiesOnly yes
